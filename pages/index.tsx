@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Flex, Text, Link, Image } from "@chakra-ui/react";
+import { Flex, Text, Link, Image, DarkMode } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -11,7 +11,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Flex height="100%" justify="center" alignItems="center" flexDir="column">
+      <Flex
+        backgroundColor="#171717"
+        height="100%"
+        justify="center"
+        alignItems="center"
+        flexDir="column"
+      >
         <Flex
           flexDir="column"
           justify="center"
@@ -29,6 +35,7 @@ export default function Home() {
             marginTop="15px"
             fontSize={[16, 24]}
             width={[250, 300, 500]}
+            color="white"
           >
             Community Gathering Space at Kraksaan, Probolinggo, East Java
           </Text>
@@ -39,7 +46,7 @@ export default function Home() {
           display="flex"
           alignItems="center"
           href="https://www.instagram.com/gatherloop/"
-          border="solid 1px"
+          border="solid 1px white"
           py="5px"
           px="15px"
           borderRadius="15px"
@@ -50,7 +57,7 @@ export default function Home() {
             width={["16px", "24px"]}
             height={["16px", "24px"]}
           />
-          <Text marginLeft={["5px", "10px"]} fontSize={[16, 24]}>
+          <Text marginLeft={["5px", "10px"]} fontSize={[16, 24]} color="white">
             Instagram
           </Text>
         </Link>
