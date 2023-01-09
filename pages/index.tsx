@@ -33,11 +33,11 @@ export default function Home() {
           <Text
             textAlign="center"
             marginTop="15px"
-            fontSize={[16, 24]}
+            fontSize={[16, 18]}
             width={[250, 300, 500]}
             color="white"
           >
-            Community Gathering Space at Kraksaan, Probolinggo, East Java
+            Community Gathering Space at Kraksaan, Probolinggo
           </Text>
         </Flex>
 
