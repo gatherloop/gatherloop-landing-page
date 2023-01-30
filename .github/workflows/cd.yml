@@ -19,5 +19,6 @@ jobs:
           script: |
             cd /root/Deployments/gatherloop-landing-page
             git pull origin main
+            npm install
             npm run build
             npm start -- -p 5000
