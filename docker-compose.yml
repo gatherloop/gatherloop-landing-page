@@ -1,0 +1,6 @@
+services:
+  landing-page:
+    image: gatherloop/landing-page
+    container_name: landing-page
+    ports:
+      - 5001:5001

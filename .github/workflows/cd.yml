@@ -9,6 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Docker Login
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - name: Build Image
+        run: docker build -t gatherloop/landing-page .
+      - name: Push Image
+        run: docker push gatherloop/landing-page
       - name: Deploy Using SSH
         uses: appleboy/ssh-action@master
         with:
@@ -19,5 +28,6 @@ jobs:
           script: |
             cd /root/Deployments/gatherloop-landing-page
             git pull origin main
-            npm run build
-            npm start -- -p 5000
+            docker compose stop
+            docker compose pull
+            docker compose up -d
