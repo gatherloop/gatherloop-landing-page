@@ -41,26 +41,57 @@ export default function Home() {
           </Text>
         </Flex>
 
-        <Link
-          _hover={{ textDecoration: "none" }}
-          display="flex"
-          alignItems="center"
-          href="https://www.instagram.com/gatherloop/"
-          border="solid 1px white"
-          py="5px"
-          px="15px"
-          borderRadius="15px"
-        >
-          <Image
-            src="/instagram.svg"
-            alt="instagram logo"
-            width={["16px", "24px"]}
-            height={["16px", "24px"]}
-          />
-          <Text marginLeft={["5px", "10px"]} fontSize={[16, 24]} color="white">
-            Instagram
-          </Text>
-        </Link>
+        <Flex gap="24px">
+          <Link
+            _hover={{ textDecoration: "none" }}
+            display="flex"
+            alignItems="center"
+            href="https://www.instagram.com/gatherloop/"
+            border="solid 1px white"
+            py="5px"
+            px="15px"
+            borderRadius="15px"
+          >
+            <Image
+              src="/instagram.svg"
+              alt="instagram logo"
+              width={["16px", "24px"]}
+              height={["16px", "24px"]}
+            />
+            <Text
+              marginLeft={["5px", "10px"]}
+              fontSize={[16, 24]}
+              color="white"
+            >
+              Instagram
+            </Text>
+          </Link>
+
+          <Link
+            _hover={{ textDecoration: "none" }}
+            display="flex"
+            alignItems="center"
+            href="/join"
+            border="solid 1px white"
+            py="5px"
+            px="15px"
+            borderRadius="15px"
+          >
+            <Image
+              src="/whatsapp.svg"
+              alt="whatsapp logo"
+              width={["16px", "24px"]}
+              height={["16px", "24px"]}
+            />
+            <Text
+              marginLeft={["5px", "10px"]}
+              fontSize={[16, 24]}
+              color="white"
+            >
+              Join Group
+            </Text>
+          </Link>
+        </Flex>
       </Flex>
     </>
   );
