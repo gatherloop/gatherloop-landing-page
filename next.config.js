@@ -18,6 +18,11 @@ const nextConfig = {
         destination: "https://chat.whatsapp.com/Fhd16OBC7HtEMSdPUmJR9k",
         permanent: false,
       },
+      {
+        source: "/location",
+        destination: "https://goo.gl/maps/8cR4VM6ZS7XWDPXZ8",
+        permanent: false,
+      },
     ];
   },
 };
