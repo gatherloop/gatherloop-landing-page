@@ -1,5 +1,6 @@
 import React from "react";
 import { Paragraph, YStack, Image, XStack, Anchor } from "tamagui";
+import { Logo } from "../src/presentations";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             width={300}
             height={60}
           />
+          <Logo size="md" />
           <Paragraph textAlign="center" marginTop="15px" color="white">
             Community Gathering Space at Kraksaan, Probolinggo
           </Paragraph>
