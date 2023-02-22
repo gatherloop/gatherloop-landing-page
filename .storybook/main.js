@@ -24,7 +24,7 @@ module.exports = {
     "storybook-addon-next-router",
     "@nrwl/react/plugins/storybook",
   ],
-  staticDirs: ["../src"],
+  staticDirs: ["../public"],
   webpackFinal: async (config, { configType }) => {
     // add your own webpack tweaks if needed
     config.resolve = {

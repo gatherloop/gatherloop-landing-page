@@ -8,4 +8,7 @@ export default {
 const Template: ComponentStory<typeof Logo> = (args) => <Logo {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  width: 1000,
+  height: 200,
+};

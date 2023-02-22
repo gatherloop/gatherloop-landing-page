@@ -19,7 +19,7 @@ export default function Home() {
             width={300}
             height={60}
           />
-          <Logo size="md" />
+          <Logo width={1000} height={200} />
           <Paragraph textAlign="center" marginTop="15px" color="white">
             Community Gathering Space at Kraksaan, Probolinggo
           </Paragraph>
