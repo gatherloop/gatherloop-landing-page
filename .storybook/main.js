@@ -18,12 +18,7 @@ module.exports = {
     "../src/presentations/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/containers/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  addons: [
-    "@storybook/addon-essentials",
-    "storybook-dark-mode",
-    "storybook-addon-next-router",
-    "@nrwl/react/plugins/storybook",
-  ],
+  addons: ["@storybook/addon-essentials", "storybook-dark-mode"],
   staticDirs: ["../public"],
   webpackFinal: async (config, { configType }) => {
     // add your own webpack tweaks if needed

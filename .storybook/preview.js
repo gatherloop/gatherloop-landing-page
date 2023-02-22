@@ -1,3 +1,4 @@
+import React from "react";
 import { TamaguiProvider, YStack } from "tamagui";
 import { appConfig } from "../tamagui.config";
 import { useDarkMode } from "storybook-dark-mode";
