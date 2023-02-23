@@ -1,3 +1,4 @@
+import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Paragraph } from "tamagui";
 import { Container } from "./Container";

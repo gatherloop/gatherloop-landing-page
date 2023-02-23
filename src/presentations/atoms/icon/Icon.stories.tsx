@@ -11,5 +11,5 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   size: 50,
-  src: "/assets/icons/mic.svg",
+  src: "/assets/icons/Calendar.svg",
 };
