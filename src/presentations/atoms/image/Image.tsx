@@ -14,6 +14,7 @@ export function Image(props: ImageProps) {
       src={props.src}
       alt={props.alt}
       aspectRatio={props.width / props.height}
+      maxWidth={props.width}
       width="100%"
       height="auto"
       defaultSource={{ uri: props.src }}
