@@ -30,6 +30,24 @@ Default.args = {
   items,
 };
 
+export const LeftAlign = Template.bind({});
+LeftAlign.args = {
+  items,
+  align: "left",
+};
+
+export const CenterAlign = Template.bind({});
+CenterAlign.args = {
+  items,
+  align: "center",
+};
+
+export const RightAlign = Template.bind({});
+RightAlign.args = {
+  items,
+  align: "right",
+};
+
 export const Small = Template.bind({});
 Small.args = {
   items,
