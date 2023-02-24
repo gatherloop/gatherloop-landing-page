@@ -1,5 +1,6 @@
 import React from "react";
-import { Image, useThemeName } from "tamagui";
+import { useThemeName } from "tamagui";
+import { Image } from "../image";
 
 export type LogoProps = {
   width: number;
@@ -18,7 +19,6 @@ export function Logo(props: LogoProps) {
       width={props.width}
       height={props.height}
       src={src}
-      defaultSource={{ uri: src }}
     />
   );
 }
