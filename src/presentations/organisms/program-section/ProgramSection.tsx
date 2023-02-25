@@ -1,5 +1,5 @@
 import React from "react";
-import { XStack, YStack } from "tamagui";
+import { ScrollView, XStack, YStack } from "tamagui";
 import { Content, IconTextList, MenuItem } from "../../molecules";
 import { Image } from "../../atoms";
 
@@ -139,6 +139,26 @@ export function ProgramSection(_props: ProgramSectionProps) {
           "Berikut beberapa program yang kami selenggarakan untuk membantumu belajar hingga mendapatkan pekerjaan impianmu",
         ]}
       />
+      <ScrollView horizontal>
+        <XStack
+          alignItems="center"
+          space="$5"
+          borderBottomWidth={1}
+          display="flex"
+          $gtXs={{ display: "none" }}
+        >
+          {programs.map(({ title, iconSrc }, index) => (
+            <MenuItem
+              key={index}
+              text={title}
+              src={iconSrc}
+              isSelected={selectedProgramIndex === index}
+              onPress={() => setSelectedProgramIndex(index)}
+            />
+          ))}
+        </XStack>
+      </ScrollView>
+
       <XStack justifyContent="space-between" flexWrap="wrap">
         <YStack
           alignItems="flex-start"

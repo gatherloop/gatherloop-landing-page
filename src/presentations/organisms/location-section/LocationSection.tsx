@@ -9,8 +9,13 @@ export type LocationSectionProps = {};
 export function LocationSection(_props: LocationSectionProps) {
   const router = useRouter();
   return (
-    <XStack>
-      <YStack display="flex" $gtSm={{ display: "none" }}>
+    <XStack flexWrap="wrap">
+      <YStack
+        flexBasis="100%"
+        display="flex"
+        marginBottom="$4"
+        $gtXs={{ display: "none" }}
+      >
         <Content
           align="center"
           size="lg"
@@ -25,10 +30,12 @@ export function LocationSection(_props: LocationSectionProps) {
       </YStack>
 
       <YStack
-        flexBasis="50%"
-        paddingRight="$4"
-        display="none"
-        $gtSm={{ display: "flex" }}
+        flexBasis="100%"
+        paddingRight="$0"
+        $gtXs={{
+          flexBasis: "50%",
+          paddingRight: "$4",
+        }}
       >
         <Image
           src="/assets/images/BaseCamp.png"
@@ -42,7 +49,7 @@ export function LocationSection(_props: LocationSectionProps) {
         flexBasis="50%"
         paddingLeft="$4"
         display="none"
-        $gtSm={{ display: "flex" }}
+        $gtXs={{ display: "flex" }}
       >
         <Content
           size="lg"

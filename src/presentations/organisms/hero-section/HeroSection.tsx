@@ -53,6 +53,7 @@ export function HeroSection(_props: HeroSectionProps) {
         display="none"
         $gtSm={{ display: "flex" }}
         $gtMd={{ paddingLeft: "$8" }}
+        alignItems="flex-end"
       >
         <Image
           src="/assets/images/Computer.png"
