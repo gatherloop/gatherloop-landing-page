@@ -2,10 +2,13 @@ import React from "react";
 import { XStack, YStack } from "tamagui";
 import { Content } from "../../molecules";
 import { Image } from "../../atoms";
+import { useRouter } from "next/router";
+import { menuItems } from "../navbar";
 
 export type HeroSectionProps = {};
 
 export function HeroSection(_props: HeroSectionProps) {
+  const router = useRouter();
   return (
     <XStack justifyContent="space-between" flexWrap="wrap-reverse">
       <YStack flexBasis="100%" display="flex" $gtSm={{ display: "none" }}>
@@ -19,7 +22,7 @@ export function HeroSection(_props: HeroSectionProps) {
           buttons={[
             {
               text: "Lihat Program Gatherloop",
-              onPress: () => console.log("clicked"),
+              onPress: () => router.push(`/#${menuItems.programs.id}`),
             },
           ]}
         />
@@ -40,7 +43,7 @@ export function HeroSection(_props: HeroSectionProps) {
           buttons={[
             {
               text: "Lihat Program Gatherloop",
-              onPress: () => console.log("clicked"),
+              onPress: () => router.push(`/#${menuItems.programs.id}`),
             },
           ]}
         />

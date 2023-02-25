@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { XStack, YStack } from "tamagui";
 import { Image } from "../../atoms";
@@ -6,6 +7,7 @@ import { Content } from "../../molecules";
 export type LocationSectionProps = {};
 
 export function LocationSection(_props: LocationSectionProps) {
+  const router = useRouter();
   return (
     <XStack>
       <YStack display="flex" $gtSm={{ display: "none" }}>
@@ -17,7 +19,7 @@ export function LocationSection(_props: LocationSectionProps) {
             "Yuk datang ke basecamp Gatherloop untuk belajar bersama. Lokasinya di perumahan new kraksaan land blok G16, Kabupaten Probolinggo.",
           ]}
           buttons={[
-            { text: "Lihat Peta", onPress: () => console.log("clicked") },
+            { text: "Lihat Peta", onPress: () => router.push("/location") },
           ]}
         />
       </YStack>
@@ -49,7 +51,7 @@ export function LocationSection(_props: LocationSectionProps) {
             "Yuk datang ke basecamp Gatherloop untuk belajar bersama. Lokasinya di perumahan new kraksaan land blok G16, Kabupaten Probolinggo.",
           ]}
           buttons={[
-            { text: "Lihat Peta", onPress: () => console.log("clicked") },
+            { text: "Lihat Peta", onPress: () => router.push("/location") },
           ]}
         />
       </YStack>

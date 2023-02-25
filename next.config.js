@@ -23,6 +23,11 @@ const nextConfig = {
         destination: "https://goo.gl/maps/8cR4VM6ZS7XWDPXZ8",
         permanent: false,
       },
+      {
+        source: "/instagram",
+        destination: "https://instagram.com/gatherloop",
+        permanent: false,
+      },
     ];
   },
 };

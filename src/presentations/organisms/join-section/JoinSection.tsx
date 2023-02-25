@@ -2,10 +2,12 @@ import React from "react";
 import { XStack, YStack } from "tamagui";
 import { Content } from "../../molecules";
 import { Image } from "../../atoms";
+import { useRouter } from "next/router";
 
 export type JoinSectionProps = {};
 
 export function JoinSection(_props: JoinSectionProps) {
+  const router = useRouter();
   return (
     <XStack justifyContent="space-between" flexWrap="wrap-reverse">
       <YStack flexBasis="100%" display="flex" $gtSm={{ display: "none" }}>
@@ -19,11 +21,11 @@ export function JoinSection(_props: JoinSectionProps) {
           buttons={[
             {
               text: "Gabung ke Grup",
-              onPress: () => console.log("clicked"),
+              onPress: () => router.push("/join"),
             },
             {
               text: "Ikuti Instagram",
-              onPress: () => console.log("clicked"),
+              onPress: () => router.push("/instagram"),
             },
           ]}
         />
@@ -44,11 +46,11 @@ export function JoinSection(_props: JoinSectionProps) {
           buttons={[
             {
               text: "Gabung ke Grup",
-              onPress: () => console.log("clicked"),
+              onPress: () => router.push("/join"),
             },
             {
               text: "Ikuti Instagram",
-              onPress: () => console.log("clicked"),
+              onPress: () => router.push("/instagram"),
             },
           ]}
         />
