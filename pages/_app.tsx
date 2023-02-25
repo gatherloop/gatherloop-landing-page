@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import { TamaguiProvider } from "tamagui";
 import appConfig from "../tamagui.config";
 import Head from "next/head";
+import "../styles/globals.css";
 
 function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useRootTheme();

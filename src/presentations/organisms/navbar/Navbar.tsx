@@ -1,15 +1,30 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
 import { Paragraph, XStack, YStack } from "tamagui";
 import { Logo } from "../../atoms";
+import Link from "next/link";
 
-const menuItems = [
-  { title: "Permasalahan" },
-  { title: "Program" },
-  { title: "Fasilitas" },
-  { title: "Lokasi" },
-  { title: "Gabung" },
-];
+export const menuItems = {
+  problems: {
+    title: "Permasalahan",
+    id: "problems",
+  },
+  programs: {
+    title: "Program",
+    id: "programs",
+  },
+  facilities: {
+    title: "Fasilitas",
+    id: "facilities",
+  },
+  location: {
+    title: "Lokasi",
+    id: "locations",
+  },
+  join: {
+    title: "Gabung",
+    id: "join",
+  },
+};
 
 export type NavbarProps = {};
 
@@ -20,10 +35,10 @@ export function Navbar(_props: NavbarProps) {
         <Logo width={236} height={50} />
       </YStack>
       <XStack space="$5" display="none" $gtXs={{ display: "flex" }}>
-        {menuItems.map(({ title }) => (
-          <TouchableOpacity key={title} onPress={() => console.log("clicked")}>
+        {Object.entries(menuItems).map(([_key, { title, id }]) => (
+          <Link key={title} href={`/#${id}`} style={{ textDecoration: "none" }}>
             <Paragraph>{title}</Paragraph>
-          </TouchableOpacity>
+          </Link>
         ))}
       </XStack>
     </XStack>
