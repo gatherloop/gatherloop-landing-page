@@ -20,7 +20,7 @@ export function HomeScreen(_props: HomeScreenProps) {
       <Navbar />
       <ScrollView flex={1} overflow="scroll">
         <Container>
-          <YStack space="$8" paddingVertical="$5">
+          <YStack space="$15" paddingVertical="$15">
             <HeroSection />
 
             <YStack id={menuItems.problems.id}>
