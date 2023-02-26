@@ -10,25 +10,25 @@ const facilities = [
     title: "Coworking Space",
     description:
       "Tempat yang nyaman untuk ngoding dan belajar bersama. Selain itu di tempat ini juga sering digunakan untuk kegiatan sharing, workshop, meetup, dll",
-    imageSrc: "/assets/images/CoworkingSpace.png",
+    imageSrc: "/assets/images/CoworkingSpace.webp",
   },
   {
     title: "Meeting Room",
     description:
       "Ruangan ini cocok apabila kamu membutuhkan tempat yang tenang untuk meeting atau diskusi",
-    imageSrc: "/assets/images/MeetingRoom.png",
+    imageSrc: "/assets/images/MeetingRoom.webp",
   },
   {
     title: "Kantin",
     description:
       "Kelaparan saat ngoding ? Tenang, di Gatherloop ada kantin yang bisa membantumu dalam mengisi kekosongan perutmu",
-    imageSrc: "/assets/images/Canteen.png",
+    imageSrc: "/assets/images/Canteen.webp",
   },
   {
     title: "Mushola",
     description:
       "Jangan cuma ngoding, ingat juga ibadah agar selamat dunia akhirat. Gatherloop memiliki mushola yang dapat digunakan untuk beribadah",
-    imageSrc: "/assets/images/PrayerRoom.png",
+    imageSrc: "/assets/images/PrayerRoom.webp",
   },
 ];
 

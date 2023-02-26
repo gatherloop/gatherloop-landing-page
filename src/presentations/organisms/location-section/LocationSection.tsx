@@ -21,7 +21,7 @@ export function LocationSection(_props: LocationSectionProps) {
           size="lg"
           title="Lokasi Basecamp"
           descriptions={[
-            "Yuk datang ke basecamp Gatherloop untuk belajar bersama. Lokasinya di perumahan new kraksaan land blok G16, Kabupaten Probolinggo.",
+            "Yuk datang ke basecamp Gatherloop untuk belajar bersama. Lokasinya di perumahan New Kraksaan Land blok G16, Kabupaten Probolinggo.",
           ]}
           buttons={[
             { text: "Lihat Peta", onPress: () => router.push("/location") },
@@ -58,7 +58,7 @@ export function LocationSection(_props: LocationSectionProps) {
         }}
       >
         <Image
-          src="/assets/images/BaseCamp.png"
+          src="/assets/images/Location.webp"
           alt=""
           width={470}
           height={332}

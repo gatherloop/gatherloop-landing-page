@@ -15,7 +15,7 @@ export function ProblemSection(_props: ProblemSectionProps) {
         $gtXs={{ flexBasis: "40%", alignItems: "flex-start", marginTop: "$0" }}
       >
         <Image
-          src="/assets/images/Discussion.png"
+          src="/assets/images/Discussion.webp"
           width={475}
           height={394}
           alt=""

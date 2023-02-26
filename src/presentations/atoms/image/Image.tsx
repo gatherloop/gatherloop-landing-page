@@ -18,6 +18,7 @@ export function Image(props: ImageProps) {
       width="100%"
       height="auto"
       defaultSource={{ uri: props.src }}
+      borderRadius="$5"
     />
   );
 }

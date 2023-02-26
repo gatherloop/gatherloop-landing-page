@@ -128,7 +128,6 @@ export type ProgramSectionProps = {};
 export function ProgramSection(_props: ProgramSectionProps) {
   const [selectedProgramIndex, setSelectedProgramIndex] = React.useState(0);
   const selectedProgram = programs[selectedProgramIndex];
-
   return (
     <YStack justifyContent="space-between" space="$5">
       <Content

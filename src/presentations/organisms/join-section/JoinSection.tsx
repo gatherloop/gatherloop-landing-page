@@ -14,9 +14,20 @@ export function JoinSection(_props: JoinSectionProps) {
         flexBasis="100%"
         alignItems="center"
         marginTop="$5"
-        $gtXs={{ alignItems: "flex-start", marginTop: "$0", flexBasis: "35%" }}
+        marginRight="$0"
+        $gtXs={{
+          alignItems: "flex-start",
+          marginTop: "$0",
+          marginRight: "$5",
+          flexBasis: "35%",
+        }}
       >
-        <Image src="/assets/images/Join.png" width={342} height={300} alt="" />
+        <Image
+          src="/assets/images/Join.webp"
+          width={4032}
+          height={3024}
+          alt=""
+        />
       </YStack>
 
       <YStack flexBasis="100%" display="flex" $gtXs={{ display: "none" }}>

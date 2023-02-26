@@ -59,12 +59,7 @@ export function HeroSection(_props: HeroSectionProps) {
           marginTop: "$0",
         }}
       >
-        <Image
-          src="/assets/images/Computer.png"
-          width={411}
-          height={350}
-          alt=""
-        />
+        <Image src="/assets/images/Hero.webp" width={411} height={350} alt="" />
       </YStack>
     </XStack>
   );
