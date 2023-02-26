@@ -1,9 +1,9 @@
 import React from "react";
-import { YStack } from "tamagui";
+import { YStack, YStackProps } from "tamagui";
 
 export type ContainerProps = {
   children: React.ReactNode;
-};
+} & YStackProps;
 
 export function Container(props: ContainerProps) {
   return (
@@ -15,6 +15,7 @@ export function Container(props: ContainerProps) {
       $gtMd={{ width: 1020 }}
       $gtLg={{ width: 1280 }}
       paddingHorizontal="$3"
+      {...props}
     >
       {props.children}
     </YStack>

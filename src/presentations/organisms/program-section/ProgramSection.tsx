@@ -1,5 +1,6 @@
 import React from "react";
 import { ScrollView, XStack, YStack } from "tamagui";
+import { Card } from "../../atoms";
 import { Content, IconTextList, MenuItem } from "../../molecules";
 
 const programs = [
@@ -138,33 +139,31 @@ export function ProgramSection(_props: ProgramSectionProps) {
           "Berikut beberapa program yang kami selenggarakan untuk membantumu belajar hingga mendapatkan pekerjaan impianmu",
         ]}
       />
-      <ScrollView horizontal>
-        <XStack
-          alignItems="center"
-          space="$5"
-          paddingBottom="$3"
-          borderBottomWidth={1}
-          display="flex"
-          $gtXs={{ display: "none" }}
-        >
-          {programs.map(({ title, iconSrc }, index) => (
-            <MenuItem
-              key={index}
-              text={title}
-              src={iconSrc}
-              isSelected={selectedProgramIndex === index}
-              onPress={() => setSelectedProgramIndex(index)}
-            />
-          ))}
-        </XStack>
-      </ScrollView>
+      <Card display="flex" $gtXs={{ display: "none" }}>
+        <ScrollView horizontal paddingBottom="$3">
+          <XStack alignItems="center" space="$5">
+            {programs.map(({ title, iconSrc }, index) => (
+              <MenuItem
+                key={index}
+                text={title}
+                src={iconSrc}
+                isSelected={selectedProgramIndex === index}
+                onPress={() => setSelectedProgramIndex(index)}
+              />
+            ))}
+          </XStack>
+        </ScrollView>
+      </Card>
 
-      <XStack justifyContent="space-between" flexWrap="wrap">
-        <YStack
+      <XStack
+        justifyContent="space-between"
+        flexWrap="wrap"
+        alignItems="flex-start"
+      >
+        <Card
           alignItems="flex-start"
           space="$5"
-          flexBasis="50%"
-          borderRightWidth={1}
+          flexBasis="30%"
           display="none"
           $gtXs={{ display: "flex" }}
         >
@@ -177,13 +176,13 @@ export function ProgramSection(_props: ProgramSectionProps) {
               onPress={() => setSelectedProgramIndex(index)}
             />
           ))}
-        </YStack>
+        </Card>
 
         <YStack
           space="$3"
           paddingLeft="$5"
           display="none"
-          flexBasis="50%"
+          flexBasis="70%"
           $gtXs={{ display: "flex" }}
         >
           <Content

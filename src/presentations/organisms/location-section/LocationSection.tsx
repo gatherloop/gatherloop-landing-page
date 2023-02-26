@@ -30,24 +30,6 @@ export function LocationSection(_props: LocationSectionProps) {
       </YStack>
 
       <YStack
-        flexBasis="100%"
-        paddingRight="$0"
-        alignItems="center"
-        $gtXs={{
-          flexBasis: "50%",
-          paddingRight: "$4",
-          alignItems: "flex-start",
-        }}
-      >
-        <Image
-          src="/assets/images/BaseCamp.png"
-          alt=""
-          width={470}
-          height={332}
-        />
-      </YStack>
-
-      <YStack
         flexBasis="50%"
         paddingLeft="$4"
         display="none"
@@ -62,6 +44,24 @@ export function LocationSection(_props: LocationSectionProps) {
           buttons={[
             { text: "Lihat Peta", onPress: () => router.push("/location") },
           ]}
+        />
+      </YStack>
+
+      <YStack
+        flexBasis="100%"
+        paddingRight="$0"
+        alignItems="center"
+        $gtXs={{
+          flexBasis: "50%",
+          paddingRight: "$4",
+          alignItems: "flex-end",
+        }}
+      >
+        <Image
+          src="/assets/images/BaseCamp.png"
+          alt=""
+          width={470}
+          height={332}
         />
       </YStack>
     </XStack>

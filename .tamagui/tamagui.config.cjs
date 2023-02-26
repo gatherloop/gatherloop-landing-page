@@ -33629,14 +33629,12 @@ var appConfig = createTamagui({
     light: {
       ...config.themes.light,
       accent: config.tokens.color.gray1Light,
-      background: config.tokens.color.gray3Light,
-      skeleton: config.tokens.color.gray8Light
+      background: config.tokens.color.gray3Light
     },
     dark: {
       ...config.themes.dark,
-      accent: config.tokens.color.gray7Dark,
-      background: config.tokens.color.gray8Dark,
-      skeleton: config.tokens.color.gray10Light
+      accent: config.tokens.color.gray3Dark,
+      background: config.tokens.color.gray1Dark
     }
   }
 });

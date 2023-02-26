@@ -1,6 +1,6 @@
 import React from "react";
 import { Paragraph, XStack, YStack } from "tamagui";
-import { Logo } from "../../atoms";
+import { Card, Container, Logo } from "../../atoms";
 import Link from "next/link";
 
 export const menuItems = {
@@ -30,17 +30,23 @@ export type NavbarProps = {};
 
 export function Navbar(_props: NavbarProps) {
   return (
-    <XStack justifyContent="space-between" alignItems="center">
-      <YStack flex={1}>
-        <Logo width={236} height={50} />
-      </YStack>
-      <XStack space="$5" display="none" $gtXs={{ display: "flex" }}>
-        {Object.entries(menuItems).map(([_key, { title, id }]) => (
-          <Link key={title} href={`/#${id}`} style={{ textDecoration: "none" }}>
-            <Paragraph>{title}</Paragraph>
-          </Link>
-        ))}
-      </XStack>
-    </XStack>
+    <Card justifyContent="space-between" borderVariant="flat">
+      <Container flexDirection="row" alignItems="center">
+        <YStack flex={1}>
+          <Logo width={165} height={35} />
+        </YStack>
+        <XStack space="$5" display="none" $gtXs={{ display: "flex" }}>
+          {Object.entries(menuItems).map(([_key, { title, id }]) => (
+            <Link
+              key={title}
+              href={`/#${id}`}
+              style={{ textDecoration: "none" }}
+            >
+              <Paragraph>{title}</Paragraph>
+            </Link>
+          ))}
+        </XStack>
+      </Container>
+    </Card>
   );
 }

@@ -16,28 +16,32 @@ export type HomeScreenProps = {};
 
 export function HomeScreen(_props: HomeScreenProps) {
   return (
-    <ScrollView flex={1}>
-      <Container>
-        <YStack space="$8" paddingVertical="$5">
-          <Navbar />
-          <HeroSection />
-          <YStack id={menuItems.problems.id}>
-            <ProblemSection />
+    <YStack flex={1}>
+      <Navbar />
+      <ScrollView flex={1}>
+        <Container>
+          <YStack space="$8" paddingVertical="$5">
+            <HeroSection />
+
+            <YStack id={menuItems.problems.id}>
+              <ProblemSection />
+            </YStack>
+
+            <YStack id={menuItems.programs.id}>
+              <ProgramSection />
+            </YStack>
+            <YStack id={menuItems.facilities.id}>
+              <FacilitySection />
+            </YStack>
+            <YStack id={menuItems.location.id}>
+              <LocationSection />
+            </YStack>
+            <YStack id={menuItems.join.id}>
+              <JoinSection />
+            </YStack>
           </YStack>
-          <YStack id={menuItems.programs.id}>
-            <ProgramSection />
-          </YStack>
-          <YStack id={menuItems.facilities.id}>
-            <FacilitySection />
-          </YStack>
-          <YStack id={menuItems.location.id}>
-            <LocationSection />
-          </YStack>
-          <YStack id={menuItems.join.id}>
-            <JoinSection />
-          </YStack>
-        </YStack>
-      </Container>
-    </ScrollView>
+        </Container>
+      </ScrollView>
+    </YStack>
   );
 }

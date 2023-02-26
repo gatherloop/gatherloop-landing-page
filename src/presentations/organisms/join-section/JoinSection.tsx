@@ -1,7 +1,7 @@
 import React from "react";
-import { XStack, YStack } from "tamagui";
+import { YStack } from "tamagui";
 import { Content } from "../../molecules";
-import { Image } from "../../atoms";
+import { Card, Image } from "../../atoms";
 import { useRouter } from "next/router";
 
 export type JoinSectionProps = {};
@@ -9,7 +9,16 @@ export type JoinSectionProps = {};
 export function JoinSection(_props: JoinSectionProps) {
   const router = useRouter();
   return (
-    <XStack justifyContent="space-between" flexWrap="wrap">
+    <Card flexDirection="row" flexWrap="wrap-reverse" padding="$8">
+      <YStack
+        flexBasis="100%"
+        alignItems="center"
+        marginTop="$5"
+        $gtXs={{ alignItems: "flex-start", marginTop: "$0", flexBasis: "35%" }}
+      >
+        <Image src="/assets/images/Join.png" width={342} height={300} alt="" />
+      </YStack>
+
       <YStack flexBasis="100%" display="flex" $gtXs={{ display: "none" }}>
         <Content
           align="center"
@@ -30,12 +39,8 @@ export function JoinSection(_props: JoinSectionProps) {
           ]}
         />
       </YStack>
-      <YStack
-        flexBasis="50%"
-        display="none"
-        paddingRight="$4"
-        $gtXs={{ display: "flex" }}
-      >
+
+      <YStack flexBasis="50%" display="none" $gtXs={{ display: "flex" }}>
         <Content
           size="lg"
           title="Tunggu apalagi ? Gabung dengan Gatherloop sekarang"
@@ -54,14 +59,6 @@ export function JoinSection(_props: JoinSectionProps) {
           ]}
         />
       </YStack>
-      <YStack
-        flexBasis="100%"
-        alignItems="center"
-        marginTop="$5"
-        $gtXs={{ alignItems: "flex-end", marginTop: "$0", flexBasis: "50%" }}
-      >
-        <Image src="/assets/images/Join.png" width={477} height={418} alt="" />
-      </YStack>
-    </XStack>
+    </Card>
   );
 }

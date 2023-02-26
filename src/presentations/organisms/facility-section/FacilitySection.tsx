@@ -1,7 +1,7 @@
 import React from "react";
 import { XStack, YStack } from "tamagui";
 import { Content } from "../../molecules";
-import { Image } from "../../atoms";
+import { Card, Image } from "../../atoms";
 
 export type FacilitySectionProps = {};
 
@@ -46,21 +46,20 @@ export function FacilitySection(_props: FacilitySectionProps) {
       <XStack justifyContent="space-between" flexWrap="wrap">
         {facilities.map(({ title, description, imageSrc }) => (
           <YStack
-            alignItems="center"
-            space="$3"
             key={title}
             flexBasis="100%"
-            marginBottom="$5"
             padding="$2"
             $gtXs={{ flexBasis: "50%" }}
             $gtMd={{ flexBasis: "25%" }}
           >
-            <Image src={imageSrc} alt={title} width={528} height={416} />
-            <Content
-              align="center"
-              title={title}
-              descriptions={[description]}
-            />
+            <Card space="$3" alignItems="center" flex={1}>
+              <Image src={imageSrc} alt={title} width={528} height={416} />
+              <Content
+                align="center"
+                title={title}
+                descriptions={[description]}
+              />
+            </Card>
           </YStack>
         ))}
       </XStack>

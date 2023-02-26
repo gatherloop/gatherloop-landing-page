@@ -1,18 +1,18 @@
 import React from "react";
 import { XStack, YStack } from "tamagui";
 import { Content } from "../../molecules";
-import { Image } from "../../atoms";
+import { Card, Image } from "../../atoms";
 
 export type ProblemSectionProps = {};
 
 export function ProblemSection(_props: ProblemSectionProps) {
   return (
-    <XStack justifyContent="space-between" flexWrap="wrap-reverse">
+    <Card flexDirection="row" flexWrap="wrap-reverse" padding="$8" space="$5">
       <YStack
         flexBasis="100%"
         alignItems="center"
         marginTop="$5"
-        $gtXs={{ flexBasis: "50%", alignItems: "flex-start", marginTop: "$0" }}
+        $gtXs={{ flexBasis: "40%", alignItems: "flex-start", marginTop: "$0" }}
       >
         <Image
           src="/assets/images/Discussion.png"
@@ -51,6 +51,6 @@ export function ProblemSection(_props: ProblemSectionProps) {
           ]}
         />
       </YStack>
-    </XStack>
+    </Card>
   );
 }
