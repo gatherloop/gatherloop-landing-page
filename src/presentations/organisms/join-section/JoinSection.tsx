@@ -9,7 +9,7 @@ export type JoinSectionProps = {};
 export function JoinSection(_props: JoinSectionProps) {
   const router = useRouter();
   return (
-    <XStack justifyContent="space-between" flexWrap="wrap-reverse">
+    <XStack justifyContent="space-between" flexWrap="wrap">
       <YStack flexBasis="100%" display="flex" $gtXs={{ display: "none" }}>
         <Content
           align="center"
@@ -54,7 +54,12 @@ export function JoinSection(_props: JoinSectionProps) {
           ]}
         />
       </YStack>
-      <YStack flexBasis="50%" display="none" $gtXs={{ display: "flex" }}>
+      <YStack
+        flexBasis="100%"
+        alignItems="center"
+        marginTop="$5"
+        $gtXs={{ alignItems: "flex-end", marginTop: "$0", flexBasis: "50%" }}
+      >
         <Image src="/assets/images/Join.png" width={477} height={418} alt="" />
       </YStack>
     </XStack>

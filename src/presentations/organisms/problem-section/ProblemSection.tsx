@@ -7,8 +7,13 @@ export type ProblemSectionProps = {};
 
 export function ProblemSection(_props: ProblemSectionProps) {
   return (
-    <XStack justifyContent="space-between">
-      <YStack display="none" flexBasis="50%" $gtXs={{ display: "flex" }}>
+    <XStack justifyContent="space-between" flexWrap="wrap-reverse">
+      <YStack
+        flexBasis="100%"
+        alignItems="center"
+        marginTop="$5"
+        $gtXs={{ flexBasis: "50%", alignItems: "flex-start", marginTop: "$0" }}
+      >
         <Image
           src="/assets/images/Discussion.png"
           width={475}

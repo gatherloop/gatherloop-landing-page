@@ -14,7 +14,7 @@ export function LocationSection(_props: LocationSectionProps) {
         flexBasis="100%"
         display="flex"
         marginBottom="$4"
-        $gtXs={{ display: "none" }}
+        $gtXs={{ display: "none", marginBottom: "$0" }}
       >
         <Content
           align="center"
@@ -32,9 +32,11 @@ export function LocationSection(_props: LocationSectionProps) {
       <YStack
         flexBasis="100%"
         paddingRight="$0"
+        alignItems="center"
         $gtXs={{
           flexBasis: "50%",
           paddingRight: "$4",
+          alignItems: "flex-start",
         }}
       >
         <Image

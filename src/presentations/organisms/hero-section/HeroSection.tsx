@@ -10,8 +10,8 @@ export type HeroSectionProps = {};
 export function HeroSection(_props: HeroSectionProps) {
   const router = useRouter();
   return (
-    <XStack justifyContent="space-between" flexWrap="wrap-reverse">
-      <YStack flexBasis="100%" display="flex" $gtSm={{ display: "none" }}>
+    <XStack justifyContent="space-between" flexWrap="wrap">
+      <YStack flexBasis="100%" display="flex" $gtXs={{ display: "none" }}>
         <Content
           align="center"
           size="lg"
@@ -31,8 +31,7 @@ export function HeroSection(_props: HeroSectionProps) {
         flexBasis="50%"
         display="none"
         paddingRight="$4"
-        $gtSm={{ display: "flex" }}
-        $gtMd={{ paddingRight: "$8" }}
+        $gtXs={{ display: "flex" }}
       >
         <Content
           size="lg"
@@ -49,11 +48,16 @@ export function HeroSection(_props: HeroSectionProps) {
         />
       </YStack>
       <YStack
-        flexBasis="50%"
-        display="none"
-        $gtSm={{ display: "flex" }}
-        $gtMd={{ paddingLeft: "$8" }}
-        alignItems="flex-end"
+        flexBasis="100%"
+        paddingLeft="$0"
+        marginTop="$5"
+        alignItems="center"
+        $gtXs={{
+          paddingLeft: "$8",
+          alignItems: "flex-end",
+          flexBasis: "50%",
+          marginTop: "$0",
+        }}
       >
         <Image
           src="/assets/images/Computer.png"

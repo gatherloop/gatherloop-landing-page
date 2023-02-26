@@ -1,7 +1,6 @@
 import React from "react";
 import { ScrollView, XStack, YStack } from "tamagui";
 import { Content, IconTextList, MenuItem } from "../../molecules";
-import { Image } from "../../atoms";
 
 const programs = [
   {
@@ -143,6 +142,7 @@ export function ProgramSection(_props: ProgramSectionProps) {
         <XStack
           alignItems="center"
           space="$5"
+          paddingBottom="$3"
           borderBottomWidth={1}
           display="flex"
           $gtXs={{ display: "none" }}
