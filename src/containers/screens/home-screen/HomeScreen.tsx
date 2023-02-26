@@ -18,7 +18,7 @@ export function HomeScreen(_props: HomeScreenProps) {
   return (
     <YStack flex={1}>
       <Navbar />
-      <ScrollView flex={1}>
+      <ScrollView flex={1} overflow="scroll">
         <Container>
           <YStack space="$8" paddingVertical="$5">
             <HeroSection />
