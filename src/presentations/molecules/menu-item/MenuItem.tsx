@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { YStack } from "tamagui";
 import { IconText, IconTextProps } from "../icon-text";
 
 export type MenuItemProps = {
@@ -8,12 +8,12 @@ export type MenuItemProps = {
 
 export function MenuItem(props: MenuItemProps) {
   return (
-    <TouchableOpacity onPress={props.onPress}>
+    <YStack cursor="pointer" onPress={props.onPress}>
       <IconText
         src={props.src}
         text={props.text}
         isSelected={props.isSelected}
       />
-    </TouchableOpacity>
+    </YStack>
   );
 }
