@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gatherloop-landing-page-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gatherloop-landing-page
+  template:
+    metadata:
+      labels:
+        app: gatherloop-landing-page
+    spec:
+      containers:
+        - name: gatherloop-landing-page
+          image: gatherloop/landing-page
+          ports:
+            - containerPort: 5001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gatherloop-landing-page-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5001
+      targetPort: 5001
+  selector:
+    app: gatherloop-landing-page
