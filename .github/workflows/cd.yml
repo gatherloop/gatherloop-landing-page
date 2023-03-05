@@ -18,7 +18,7 @@ jobs:
       - name: Build Image
         run: docker build -t gatherloop/landing-page:${{ github.sha }} .
       - name: Push Image
-        run: docker push gatherloop/landing-page
+        run: docker push gatherloop/landing-page:${{ github.sha }}
       - name: Kubernetes set context
         uses: Azure/k8s-set-context@v1
         with:
