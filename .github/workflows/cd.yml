@@ -16,7 +16,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build Image
-        run: docker build -t gatherloop/landing-page .
+        run: docker build -t gatherloop/landing-page:${{ github.sha }} .
       - name: Push Image
         run: docker push gatherloop/landing-page
       - name: Kubernetes set context
@@ -25,4 +25,6 @@ jobs:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
       - name: Kubernetes apply
-        run: kubectl apply -f k8s/prod.yaml
+        run: |
+          kubectl apply -f k8s/prod.yaml
+          kubectl set image deployment/gatherloop-landing-page-deployment gatherloop-landing-page=gatherloop/landing-page:${{ github.sha }}
