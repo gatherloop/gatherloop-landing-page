@@ -19,6 +19,16 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-frontend",
+        destination: "https://chat.whatsapp.com/CagRjk8iOAqB8xDyeWtWEd",
+        permanent: false,
+      },
+      {
+        source: "/join-backend",
+        destination: "https://chat.whatsapp.com/IUogZB2obKS7FeaWJhT5br",
+        permanent: false,
+      },
+      {
         source: "/location",
         destination: "https://goo.gl/maps/8cR4VM6ZS7XWDPXZ8",
         permanent: false,
