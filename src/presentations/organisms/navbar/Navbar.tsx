@@ -34,7 +34,7 @@ export function Navbar(_props: NavbarProps) {
       <Container flexDirection="row" alignItems="center">
         <YStack flex={1}>
           <Logo width={165} height={35} />
-          <Paragraph>Why is it not reflected ?</Paragraph>
+          <Paragraph>Wait, why now it is reflected ??</Paragraph>
         </YStack>
         <XStack space="$5" display="none" $gtXs={{ display: "flex" }}>
           {Object.entries(menuItems).map(([_key, { title, id }]) => (
