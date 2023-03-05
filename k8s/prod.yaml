@@ -24,7 +24,7 @@ kind: Service
 metadata:
   name: gatherloop-landing-page-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 5001
       targetPort: 5001
