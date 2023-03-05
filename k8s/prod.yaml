@@ -15,6 +15,7 @@ spec:
       containers:
         - name: gatherloop-landing-page
           image: gatherloop/landing-page
+          imagePullPolicy: Always
           ports:
             - containerPort: 5001
 ---
