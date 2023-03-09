@@ -29,6 +29,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-nugas-bareng",
+        destination: "https://chat.whatsapp.com/BZJ8yfA9hTQDdTVkk1D8aS",
+        permanent: false,
+      },
+      {
         source: "/location",
         destination: "https://goo.gl/maps/8cR4VM6ZS7XWDPXZ8",
         permanent: false,
