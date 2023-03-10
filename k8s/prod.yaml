@@ -17,7 +17,7 @@ spec:
           image: gatherloop/landing-page
           env:
             - name: PORT
-            - value: 5001
+            - value: "5001"
 ---
 apiVersion: v1
 kind: Service
