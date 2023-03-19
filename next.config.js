@@ -34,7 +34,7 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/konsultasi-nugas-bareng",
+        source: "/form-nugas-bareng",
         destination: "https://forms.gle/7Df8igJt7RdszbMe9",
         permanent: false,
       },
