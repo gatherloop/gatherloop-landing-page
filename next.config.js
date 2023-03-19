@@ -35,7 +35,7 @@ const nextConfig = {
       },
       {
         source: "/konsultasi-nugas-bareng",
-        destination: "https://chat.whatsapp.com/BZJ8yfA9hTQDdTVkk1D8aS",
+        destination: "https://forms.gle/7Df8igJt7RdszbMe9",
         permanent: false,
       },
       {
