@@ -1,2 +1,2 @@
-import { HomeScreen } from "../src/containers";
+import { HomeScreen } from "@/screens";
 export default HomeScreen;

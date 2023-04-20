@@ -32,7 +32,7 @@ export default class Document extends NextDocument {
         <Head>
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=optional"
+            href="https://fonts.googleapis.com/css?family=Lato:400,500,600,700,800&display=optional"
           />
         </Head>
         <body>

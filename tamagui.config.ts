@@ -1,12 +1,19 @@
 import { createTamagui } from "tamagui";
 import { config } from "@tamagui/config-base";
-import { createInterFont } from "@tamagui/font-inter";
-
-const interFont = createInterFont();
 
 export const appConfig = createTamagui({
   ...config,
-  fonts: { ...config.fonts, body: interFont, heading: interFont },
+  fonts: {
+    ...config.fonts,
+    heading: {
+      ...config.fonts.heading,
+      family: "Lato, Helvetica, Arial, sans-serif",
+    },
+    body: {
+      ...config.fonts.body,
+      family: "Lato, Helvetica, Arial, sans-serif",
+    },
+  },
   themes: {
     ...config.themes,
     light: {

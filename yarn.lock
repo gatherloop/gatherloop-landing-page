@@ -3546,6 +3546,13 @@
     "@tamagui/helpers-tamagui" "^1.5.9"
     "@tamagui/text" "^1.5.9"
 
+"@tamagui/lucide-icons@1.5.9":
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/@tamagui/lucide-icons/-/lucide-icons-1.5.9.tgz#b1eab5b85bdd405af75d6cfb321d64b8f427a364"
+  integrity sha512-o8PvXrcBt8DNvVtgyoYvJKVI6odRtd5KHqLlRhKlwKcvibjkdX2C19CeljM0mvnMx0aU4GUBfmqR+QH1RUWlnw==
+  dependencies:
+    "@tamagui/core" "^1.5.9"
+
 "@tamagui/next-plugin@^1.5.9":
   version "1.5.9"
   resolved "https://registry.yarnpkg.com/@tamagui/next-plugin/-/next-plugin-1.5.9.tgz#87811d57d1fbac6205f8cc679e0f59a9198be25c"

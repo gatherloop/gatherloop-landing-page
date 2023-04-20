@@ -18830,11 +18830,11 @@ var require_cjs47 = __commonJS({
     var __toCommonJS2 = /* @__PURE__ */ __name((mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod), "__toCommonJS");
     var src_exports = {};
     __export2(src_exports, {
-      createInterFont: () => createInterFont3
+      createInterFont: () => createInterFont2
     });
     module2.exports = __toCommonJS2(src_exports);
     var import_core33 = require("@tamagui/core-node");
-    var createInterFont3 = /* @__PURE__ */ __name((font = {}, {
+    var createInterFont2 = /* @__PURE__ */ __name((font = {}, {
       sizeLineHeight = /* @__PURE__ */ __name((size3) => size3 + 10, "sizeLineHeight"),
       sizeSize = /* @__PURE__ */ __name((size3) => size3 * 1, "sizeSize")
     } = {}) => {
@@ -33619,11 +33619,19 @@ var config = {
 config.mediaQueryDefaultActive = mediaQueryDefaultActive;
 
 // tamagui.config.ts
-var import_font_inter2 = __toESM(require_cjs47());
-var interFont = (0, import_font_inter2.createInterFont)();
 var appConfig = createTamagui({
   ...config,
-  fonts: { ...config.fonts, body: interFont, heading: interFont },
+  fonts: {
+    ...config.fonts,
+    heading: {
+      ...config.fonts.heading,
+      family: "Lato, Helvetica, Arial, sans-serif"
+    },
+    body: {
+      ...config.fonts.body,
+      family: "Lato, Helvetica, Arial, sans-serif"
+    }
+  },
   themes: {
     ...config.themes,
     light: {
