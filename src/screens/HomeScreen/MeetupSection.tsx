@@ -7,13 +7,13 @@ const items: ItemCardProps[] = [
   {
     title: "PERLUAS WAWASAN",
     description:
-      "Meetup GatherLoop menghadirkan para pembicara dari berbagai industri yang akan memberikan update terbaru tentang teknologi dan tren yang saat ini digunakan di industri. Acara ini menawarkan kesempatan bagi para peserta untuk memperluas pengetahuan mereka tentang tren dan inovasi di industri, dan juga dapat membantu dalam menentukan bidang yang harus dipelajari selanjutnya",
+      "Meetup Gatherloop menghadirkan para pembicara dari berbagai industri yang akan memberikan update terbaru tentang teknologi dan tren yang saat ini digunakan di industri. Acara ini memberikan kesempatan kepadamu untuk memperluas pengetahuan tentang tren dan inovasi terbaru di industri, dan juga dapat membantumu dalam menentukan topik apa yang harus dipelajari selanjutnya",
     icon: <Share2 />,
   },
   {
     title: "TEMUKAN RELASI BARU",
     description:
-      "Meetup GatherLoop dihadiri oleh pelajar dan pengembang dari berbagai industri yang berbeda. Acara ini merupakan kesempatan yang tepat bagi peserta untuk memperluas jaringan kontak dan membangun hubungan yang baru. Dalam lingkungan yang santai dan ramah, peserta dapat berdiskusi tentang topik-topik terkait teknologi, berbagi pengalaman dan ide, dan meminta masukan dari rekan-rekan sejawat untuk membantu memperbaiki proses belajar mereka. ",
+      "Meetup Gatherloop dihadiri oleh pelajar dan developer dari berbagai industri yang berbeda. Acara ini merupakan kesempatan yang tepat bagi peserta untuk memperluas jaringan dan membangun hubungan yang baru. Dalam lingkungan yang santai dan ramah, kamu dapat berdiskusi tentang topik-topik terkait teknologi, berbagi pengalaman dan ide, dan meminta masukan dari rekan-rekan sejawat untuk membantu memperbaiki proses belajarmu.",
     icon: <Users />,
   },
 ];
@@ -63,8 +63,8 @@ export function MeetupSection() {
               Gatherloop mengadakan meetup rutin tiap bulan yang dapat dihadiri
               oleh pelajar, mahasiswa, fresh graduate, atau siapapun yang
               berkutat di bidang IT. Di setiap meetup akan ada topik yang
-              dibawakan oleh developer dari industri, sehingga cocok untuk
-              menambah wawasan dan memperluas relasi
+              dibawakan oleh developer dari berbagai industri, sehingga cocok
+              untuk menambah wawasan dan memperluas relasi
             </Paragraph>
             <XStack>
               <Anchor

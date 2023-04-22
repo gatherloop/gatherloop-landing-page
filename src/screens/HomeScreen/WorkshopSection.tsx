@@ -1,24 +1,19 @@
 import { Divider, ItemCard, ItemCardProps } from "@/components";
-import {
-  ArrowRightCircle,
-  Code2,
-  Rocket,
-  Settings,
-} from "@tamagui/lucide-icons";
+import { ArrowRightCircle, Code2, Settings } from "@tamagui/lucide-icons";
 import React from "react";
-import { Anchor, Button, H5, Paragraph, XStack, YStack } from "tamagui";
+import { Anchor, Button, H4, Paragraph, XStack, YStack } from "tamagui";
 
 const items: ItemCardProps[] = [
   {
     title: "WORKSHOP FRONTEND",
     description:
-      "GatherLoop menghadirkan workshop frontend yang dirancang khusus untuk memperkenalkan dasar-dasar JavaScript, DOM, Single Page Application, Modularization, Typescript, dan React, sehingga dapat membantu para peserta untuk mengenal dunia frontend.",
+      "Gatherloop menghadirkan workshop Frontend yang dirancang khusus untuk memperkenalkan dasar-dasar JavaScript, DOM, Single Page Application, Modularization, Typescript, dan React, sehingga dapat membantumu untuk mengenal dunia Frontend.",
     icon: <Code2 />,
   },
   {
     title: "WORKSHOP BACKEND",
     description:
-      "Buat kamu penggiat backend, Gatherloop juga menghadirkan workshop backend untuk mengenalkan bahasa pemrograman Golang, web development, API development, ORM, Middleware, JWT, dan Clean Architecture. Workshop ini didesain untuk membantu peserta mengenal dunia backend dengan langkah yang tepat.",
+      "Buat kamu penggiat Backend, Gatherloop juga menghadirkan workshop Backend untuk mengenalkan bahasa pemrograman Golang, web development, API development, ORM, Middleware, JWT, dan Clean Architecture. Workshop ini didesain untuk membantumu mengenal dunia Backend dengan langkah yang tepat.",
     icon: <Settings />,
   },
 ];
@@ -27,9 +22,9 @@ export function WorkshopSection() {
   return (
     <XStack space="$8">
       <YStack space="$5" flex={1} width="100%">
-        <H5 textAlign="center" $gtXs={{ textAlign: "left" }}>
+        <H4 textAlign="center" $gtXs={{ textAlign: "left" }}>
           WORKSHOP
-        </H5>
+        </H4>
         <Divider alignSelf="center" $gtXs={{ alignSelf: "flex-start" }} />
         <Paragraph
           size="$8"
