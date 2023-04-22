@@ -1,7 +1,7 @@
 import { Divider, ItemCard, ItemCardProps } from "@/components";
 import { ArrowRightCircle, Code2, Settings } from "@tamagui/lucide-icons";
 import React from "react";
-import { Anchor, Button, H4, Paragraph, XStack, YStack } from "tamagui";
+import { Anchor, Button, H4, Paragraph, YStack } from "tamagui";
 
 const items: ItemCardProps[] = [
   {
@@ -20,7 +20,7 @@ const items: ItemCardProps[] = [
 
 export function WorkshopSection() {
   return (
-    <XStack space="$8">
+    <YStack space="$8" $gtXs={{ flexDirection: "row" }}>
       <YStack space="$5" flex={1} width="100%">
         <H4 textAlign="center" $gtXs={{ textAlign: "left" }}>
           WORKSHOP
@@ -35,7 +35,7 @@ export function WorkshopSection() {
           Gali potensi dan kembangkan skillmu bersama kami melalui workshop
           terbaik dari Gatherloop
         </Paragraph>
-        <Paragraph size="$5">
+        <Paragraph size="$5" textAlign="center" $gtXs={{ textAlign: "left" }}>
           Kamu suka ngoding dan ingin menjadi seorang Frontend atau Backend
           engineer tapi belum memiliki skill yang dibutuhkan ? Tenang, kamu bisa
           mengikuti workshop Frontend dan Backend yang diadakan oleh Gatherloop
@@ -45,6 +45,8 @@ export function WorkshopSection() {
         <Anchor
           href="https://www.instagram.com/gatherloop"
           textDecorationLine="none"
+          alignSelf="center"
+          $gtXs={{ alignSelf: "flex-start" }}
         >
           <Button theme="blue" icon={ArrowRightCircle}>
             LIHAT JADWAL WORKSHOP
@@ -57,6 +59,6 @@ export function WorkshopSection() {
           <ItemCard key={item.title} marginBottom="$0" {...item} />
         ))}
       </YStack>
-    </XStack>
+    </YStack>
   );
 }

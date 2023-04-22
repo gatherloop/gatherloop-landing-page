@@ -13,7 +13,7 @@ export function FooterSection() {
       marginTop="$10"
     >
       <Container>
-        <XStack space="$5">
+        <YStack space="$5" $gtXs={{ flexDirection: "row" }}>
           <YStack space="$3" flex={1} width="100%">
             <Logo width={250} height={50} />
             <H5>COMMUNITY GATHERING SPACE</H5>
@@ -24,10 +24,10 @@ export function FooterSection() {
               Ikuti Instagram Gatherloop atau Gabung ke Group agar tidak
               ketinggalan update event - event terbaru dari Gatherloop
             </Paragraph>
-            <XStack
+            <YStack
               space="$3"
               justifyContent="center"
-              $gtXs={{ justifyContent: "flex-start" }}
+              $gtXs={{ justifyContent: "flex-start", flexDirection: "row" }}
             >
               <Anchor
                 href="https://www.instagram.com/gatherloop/"
@@ -43,9 +43,9 @@ export function FooterSection() {
                   Gabung Group
                 </Button>
               </Anchor>
-            </XStack>
+            </YStack>
           </YStack>
-        </XStack>
+        </YStack>
       </Container>
     </YStack>
   );

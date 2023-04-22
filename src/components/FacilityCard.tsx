@@ -18,7 +18,7 @@ export function FacilityCard({
       <Image
         src={{ uri: imageUrl }}
         defaultSource={{ uri: imageUrl }}
-        aspectRatio={1 / 1.5}
+        aspectRatio={1}
         width="100%"
         height="auto"
         alt={title}

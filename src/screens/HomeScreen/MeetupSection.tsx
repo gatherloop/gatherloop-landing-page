@@ -30,15 +30,16 @@ export function MeetupSection() {
           <Image
             maxWidth={480}
             width="100%"
-            height="100%"
+            height="auto"
             marginRight="$0"
             marginBottom="$3"
-            $gtSm={{ marginRight: "$8", marginBottom: "$8" }}
             aspectRatio={2 / 1}
             defaultSource={{ uri: "/assets/images/Join.webp" }}
             src={{ uri: "/assets/images/Join.webp" }}
             alt="mentoring"
             borderRadius="$12"
+            flexBasis="100%"
+            $gtSm={{ flexBasis: "40%", marginRight: "$8", marginBottom: "$8" }}
           />
 
           <YStack flexBasis="100%" $gtSm={{ flexBasis: "40%" }} space="$5">
@@ -66,7 +67,10 @@ export function MeetupSection() {
               dibawakan oleh developer dari berbagai industri, sehingga cocok
               untuk menambah wawasan dan memperluas relasi
             </Paragraph>
-            <XStack>
+            <XStack
+              justifyContent="center"
+              $gtSm={{ justifyContent: "flex-start" }}
+            >
               <Anchor
                 href="https://www.instagram.com/gatherloop"
                 textDecorationLine="none"

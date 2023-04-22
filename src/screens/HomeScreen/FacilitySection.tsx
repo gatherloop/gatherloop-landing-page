@@ -1,6 +1,6 @@
 import { FacilityCard, Divider } from "@/components";
 import React from "react";
-import { H3, Paragraph, YStack } from "tamagui";
+import { H3, Paragraph, XStack, YStack } from "tamagui";
 
 const items = [
   {
@@ -42,7 +42,7 @@ export function FacilitySection() {
           <H3 textAlign="center" $gtXs={{ textAlign: "left" }}>
             FASILITAS BASECAMP
           </H3>
-          <Divider alignSelf="center" $gtSm={{ alignSelf: "flex-start" }} />
+          <Divider alignSelf="center" $gtXs={{ alignSelf: "flex-start" }} />
           <Paragraph
             size="$5"
             textAlign="center"
@@ -55,17 +55,19 @@ export function FacilitySection() {
         </YStack>
       </YStack>
 
-      <YStack space="$8" $gtXs={{ flexDirection: "row" }}>
+      <XStack flexWrap="wrap" marginLeft="$-3" marginRight="$-3">
         {items.map((item) => (
-          <FacilityCard
+          <YStack
+            flexBasis="100%"
+            $gtXs={{ flexBasis: "50%" }}
+            $gtSm={{ flexBasis: "25%" }}
+            padding="$3"
             key={item.title}
-            {...item}
-            flex={1}
-            width="100%"
-            height="100%"
-          />
+          >
+            <FacilityCard {...item} width="100%" height="100%" />
+          </YStack>
         ))}
-      </YStack>
+      </XStack>
     </YStack>
   );
 }

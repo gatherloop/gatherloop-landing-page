@@ -15,11 +15,12 @@ export function LocationSection() {
           <Image
             maxWidth={480}
             width="100%"
-            height="100%"
+            height="auto"
             marginRight="$0"
             marginBottom="$3"
-            $gtSm={{ marginRight: "$8", marginBottom: "$8" }}
-            aspectRatio={2 / 1}
+            flexBasis="100%"
+            $gtSm={{ marginRight: "$8", marginBottom: "$8", flexBasis: "40%" }}
+            aspectRatio={1}
             defaultSource={{ uri: "/assets/images/Location.webp" }}
             src={{ uri: "/assets/images/Location.webp" }}
             alt="mentoring"
@@ -46,7 +47,10 @@ export function LocationSection() {
               Basecamp Gatherloop berlokasi di perumahan new kraksaan land blok
               G16, Kabupaten Probolinggo.
             </Paragraph>
-            <XStack>
+            <XStack
+              justifyContent="center"
+              $gtSm={{ justifyContent: "flex-start" }}
+            >
               <Anchor href="/location" textDecorationLine="none">
                 <Button theme="blue" icon={MapPin}>
                   LIHAT LOKASI
