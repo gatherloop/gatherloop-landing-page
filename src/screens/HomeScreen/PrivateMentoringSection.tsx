@@ -1,7 +1,13 @@
 import { Divider, ItemCard, ItemCardProps } from "@/components";
-import { Newspaper, Rocket, Users } from "@tamagui/lucide-icons";
+import {
+  ArrowRightCircle,
+  Newspaper,
+  Rocket,
+  Users,
+} from "@tamagui/lucide-icons";
+import Link from "next/link";
 import React from "react";
-import { H4, Paragraph, YStack } from "tamagui";
+import { Button, H4, Paragraph, XStack, YStack } from "tamagui";
 
 const items: ItemCardProps[] = [
   {
@@ -27,9 +33,9 @@ const items: ItemCardProps[] = [
 export function PrivateMentoringSection() {
   return (
     <YStack marginTop="$11" space="$8" alignItems="center">
-      <YStack space="$3">
+      <YStack space="$3" alignItems="center">
         <H4 textAlign="center">PRIVATE MENTORING</H4>
-        <Divider alignSelf="center" />
+        <Divider />
         <Paragraph
           textAlign="center"
           size="$7"
@@ -39,6 +45,16 @@ export function PrivateMentoringSection() {
           Dibimbing secara one on one untuk menjadi Frontend atau Backend
           engineer bersama mentor ahli di bidangnya
         </Paragraph>
+        <XStack>
+          <Link
+            href="/form-private-mentoring"
+            style={{ textDecoration: "none" }}
+          >
+            <Button theme="blue" icon={ArrowRightCircle}>
+              DAFTAR MENTORING SEKARANG
+            </Button>
+          </Link>
+        </XStack>
       </YStack>
       <YStack
         theme="blue"

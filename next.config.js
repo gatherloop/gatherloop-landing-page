@@ -39,6 +39,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/form-private-mentoring",
+        destination: "https://forms.gle/Z11WnHmvzcE53RyX7",
+        permanent: false,
+      },
+      {
         source: "/location",
         destination: "https://goo.gl/maps/8cR4VM6ZS7XWDPXZ8",
         permanent: false,
