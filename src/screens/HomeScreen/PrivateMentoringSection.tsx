@@ -45,14 +45,18 @@ export function PrivateMentoringSection() {
           Dibimbing secara one on one untuk menjadi Frontend atau Backend
           engineer bersama mentor ahli di bidangnya
         </Paragraph>
-        <XStack>
+        <XStack space="$3">
           <Link
             href="/form-private-mentoring"
             style={{ textDecoration: "none" }}
           >
             <Button theme="blue" icon={ArrowRightCircle}>
-              DAFTAR MENTORING SEKARANG
+              DAFTAR SEKARANG
             </Button>
+          </Link>
+
+          <Link href="/private-mentoring" style={{ textDecoration: "none" }}>
+            <Button>PELAJARI LEBIH LANJUT</Button>
           </Link>
         </XStack>
       </YStack>

@@ -35,7 +35,6 @@ export function ItemCard({
 }: ItemCardProps) {
   return (
     <YStack
-      {...yStackProps}
       space="$3"
       theme="blue"
       backgroundColor={isTransparent ? undefined : "$background"}
@@ -44,6 +43,7 @@ export function ItemCard({
       padding={isTransparent ? undefined : "$5"}
       borderRadius={isTransparent ? undefined : "$5"}
       elevation={isTransparent ? undefined : "$1"}
+      {...yStackProps}
     >
       <XStack space="$3" alignItems="center">
         {icon ? (
