@@ -1,7 +1,16 @@
 import { Divider } from "@/components";
 import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import React from "react";
-import { Anchor, Button, H5, Image, Paragraph, XStack, YStack } from "tamagui";
+import {
+  Anchor,
+  Button,
+  H5,
+  Image,
+  Paragraph,
+  Theme,
+  XStack,
+  YStack,
+} from "tamagui";
 
 export function HeroSection() {
   return (
@@ -38,8 +47,19 @@ export function HeroSection() {
           textAlign="center"
           $gtSm={{ textAlign: "left" }}
         >
-          Membantumu menjadi Frontend dan Backend Engineer dengan pelatihan
-          secara one on one
+          Membantumu menjadi seorang software engineer hebat dengan pelatihan
+          secara{" "}
+          <Theme inverse>
+            <Paragraph
+              size="$9"
+              backgroundColor="$background"
+              paddingHorizontal="$2.5"
+              paddingVertical="$1.5"
+              lineHeight="$10"
+            >
+              one on one
+            </Paragraph>
+          </Theme>
         </Paragraph>
         <Paragraph
           size="$5"
