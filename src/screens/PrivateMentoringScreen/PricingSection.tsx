@@ -1,7 +1,7 @@
 import { Divider } from "@/components";
 import { CheckCircle2 } from "@tamagui/lucide-icons";
 import React from "react";
-import { H5, Paragraph, Theme, XStack, YStack } from "tamagui";
+import { H5, Paragraph, Theme, XStack, YStack, YStackProps } from "tamagui";
 
 const items = [
   {
@@ -42,14 +42,14 @@ const items = [
   },
 ];
 
-export function PricingSection() {
+export function PricingSection(props: YStackProps) {
   return (
     <YStack
       alignItems="center"
       justifyContent="center"
-      paddingVertical="$15"
       space="$10"
       $gtSm={{ flexDirection: "row", alignItems: "flex-start" }}
+      {...props}
     >
       <XStack gap={24}>
         {items.map((item) => (

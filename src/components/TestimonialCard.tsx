@@ -24,36 +24,34 @@ export function TestimonialCard({
   ...yStackProps
 }: TestimonialCardProps) {
   return (
-    <Theme inverse>
-      <YStack
-        theme="blue"
-        backgroundColor="$background"
-        borderColor="$borderColor"
-        borderWidth={1}
-        borderRadius="$5"
-        padding="$5"
-        space="$5"
-        justifyContent="space-between"
-        {...yStackProps}
-      >
-        <Paragraph size="$6">{description}</Paragraph>
-        <XStack space="$3" alignItems="center">
-          <Image
-            borderRadius="$20"
-            maxWidth={60}
-            width="100%"
-            height="auto"
-            aspectRatio={500 / 500}
-            src={{ uri: imageUrl }}
-            defaultSource={{ uri: imageUrl }}
-            alt={imageUrl}
-          />
-          <YStack>
-            <H4>{name}</H4>
-            <Paragraph size="$5">{job}</Paragraph>
-          </YStack>
-        </XStack>
-      </YStack>
-    </Theme>
+    <YStack
+      theme="blue"
+      backgroundColor="$background"
+      borderColor="$borderColor"
+      borderWidth={1}
+      borderRadius="$5"
+      padding="$5"
+      space="$5"
+      justifyContent="space-between"
+      {...yStackProps}
+    >
+      <Paragraph size="$6">{description}</Paragraph>
+      <XStack space="$3" alignItems="center">
+        <Image
+          borderRadius="$20"
+          maxWidth={60}
+          width="100%"
+          height="auto"
+          aspectRatio={500 / 500}
+          src={{ uri: imageUrl }}
+          defaultSource={{ uri: imageUrl }}
+          alt={imageUrl}
+        />
+        <YStack>
+          <H4>{name}</H4>
+          <Paragraph size="$5">{job}</Paragraph>
+        </YStack>
+      </XStack>
+    </YStack>
   );
 }

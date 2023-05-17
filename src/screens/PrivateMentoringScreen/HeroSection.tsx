@@ -10,16 +10,17 @@ import {
   Theme,
   XStack,
   YStack,
+  YStackProps,
 } from "tamagui";
 
-export function HeroSection() {
+export function HeroSection(props: YStackProps) {
   return (
     <YStack
       alignItems="center"
       justifyContent="center"
-      paddingVertical="$15"
       space="$10"
       $gtSm={{ flexDirection: "row", alignItems: "flex-start" }}
+      {...props}
     >
       <Image
         borderRadius="$5"
@@ -43,24 +44,14 @@ export function HeroSection() {
         <Divider />
         <Paragraph
           size="$9"
-          maxWidth={600}
+          maxWidth={540}
           textAlign="center"
           $gtSm={{ textAlign: "left" }}
         >
-          Membantumu menjadi seorang software engineer hebat dengan pelatihan
-          secara{" "}
-          <Theme inverse>
-            <Paragraph
-              size="$9"
-              backgroundColor="$background"
-              paddingHorizontal="$2.5"
-              paddingVertical="$1.5"
-              lineHeight="$10"
-            >
-              one on one
-            </Paragraph>
-          </Theme>
+          Membantumu menjadi seorang software engineer hebat dengan mentoring
+          secara one on one
         </Paragraph>
+
         <Paragraph
           size="$5"
           maxWidth={640}

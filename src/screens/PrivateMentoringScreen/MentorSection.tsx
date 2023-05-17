@@ -1,15 +1,18 @@
 import { ArrowRightCircle } from "@tamagui/lucide-icons";
 import React from "react";
-import { Anchor, Button, Image, Paragraph, XStack, YStack } from "tamagui";
+import {
+  Anchor,
+  Button,
+  Image,
+  Paragraph,
+  XStack,
+  YStack,
+  YStackProps,
+} from "tamagui";
 
-export function MentorSection() {
+export function MentorSection(props: YStackProps) {
   return (
-    <YStack
-      alignItems="center"
-      justifyContent="center"
-      marginVertical="$15"
-      space="$10"
-    >
+    <YStack alignItems="center" justifyContent="center" space="$10" {...props}>
       <Image
         borderRadius="$20"
         maxWidth={240}

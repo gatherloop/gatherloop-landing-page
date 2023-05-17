@@ -1,41 +1,41 @@
 import { Divider, ItemCard, ItemCardProps } from "@/components";
 import React from "react";
-import { H4, Image, Paragraph, XStack, YStack } from "tamagui";
+import { H4, Image, Paragraph, XStack, YStack, YStackProps } from "tamagui";
 
 type Item = ItemCardProps & { imageSrc: string };
 
 const items: Item[] = [
   {
-    title: "ALIH JENJANG KARIR",
+    title: "PELAJAR DAN UMUM",
     description:
-      "Selama belajar dengan mentor, kamu akan mendapatkan tiga kali pertemuan setiap minggunya. Di awal minggu, kamu akan mendapatkan gambaran tentang materi ",
-    imageSrc: "/assets/images/CareerSwitchingOffering.png",
+      "Kami dapat membantumu dalam mempersiapkan skill yang dibutuhkan untuk menjadi software engineer dengan roadmap belajar yang disesuaikan dengan proses belajarmu saat ini",
+    imageSrc: "/assets/images/CodingBootcampOffering.png",
   },
   {
-    title: "WEB DEVELOPMENT BOOTCAMP",
+    title: "INGIN ALIH PROFESI",
     description:
-      "Pertama, kamu akan berkonsultasi dengan seorang mentor ahli dalam bidangnya untuk membahas proses belajar dan kendala yang kamu hadapi saat ini.",
-    imageSrc: "/assets/images/CodingBootcampOffering.png",
+      "Buat kamu yang ingin pindah jenjang karir menjadi software engineer, kami dapat memberikan pelatihan yang dapat menyesuaikan waktu yang dibutuhkan",
+    imageSrc: "/assets/images/CareerSwitchingOffering.png",
   },
   {
     title: "PERSIAPAN INTERVIEW",
     description:
-      "Selanjutnya, kamu akan mendapatkan rekomendasi roadmap belajar yang berisi materi dan estimasi durasi pembelajaran yang akan ditempuh",
+      "Kamu juga dapat membantumu untuk melakukan persiapan interview dengan membantumu meningkatkan hard skill yang masih butuh diimprove, mempersiapkan portfolio, resume, self branding, meningkatkan skill komunikasi, dll",
     imageSrc: "/assets/images/InterviewPreparationOffering.png",
   },
   {
-    title: "MENINGKATKAN JENJANG KARIR",
+    title: "MENINGKATKAN KARIR",
     description:
-      "Selanjutnya, kamu akan mendapatkan rekomendasi roadmap belajar yang berisi materi dan estimasi durasi pembelajaran yang akan ditempuh",
+      "Kami juga dapat membantumu untuk meningkatkan jenjang karir, kami akan membantu menilai performamu saat ini dan memberikan roadmap dan planning yang dapat digunakan untuk meningkatkan potensi kenaikan jenjang karirmu",
     imageSrc: "/assets/images/CareerImprovementOffering.png",
   },
 ];
 
-export function OfferingSection() {
+export function OfferingSection(props: YStackProps) {
   return (
-    <YStack space="$8" alignItems="center">
+    <YStack space="$8" alignItems="center" {...props}>
       <YStack space="$3" alignItems="center">
-        <H4 textAlign="center">APA YANG BISA KAMI BANTU ?</H4>
+        <H4 textAlign="center">APAKAH PROGRAM INI COCOK UNTUKMU ?</H4>
         <Divider />
         <Paragraph
           textAlign="center"
@@ -43,7 +43,10 @@ export function OfferingSection() {
           fontWeight="normal"
           maxWidth={640}
         >
-          Apapun kebutuhan dan masalahmu, kami bisa bantu
+          Kami dapat membantu siapapun untuk belajar ngoding, mulai dari
+          pelajar, umum, profesional yang ingin alih profesi, orang - orang yang
+          ingin melakukan persiapan interview, dan orang - orang yang sudah
+          kerja dan ingin meningkatkan karir mereka
         </Paragraph>
       </YStack>
       <XStack theme="blue" flexWrap="wrap">

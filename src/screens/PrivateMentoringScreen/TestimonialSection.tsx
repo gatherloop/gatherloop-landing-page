@@ -1,6 +1,6 @@
 import { Divider, TestimonialCard, TestimonialCardProps } from "@/components";
 import React from "react";
-import { H3, Paragraph, XStack, YStack } from "tamagui";
+import { H3, Paragraph, XStack, YStack, YStackProps } from "tamagui";
 
 const items: TestimonialCardProps[] = [
   {
@@ -53,9 +53,9 @@ const items: TestimonialCardProps[] = [
   },
 ];
 
-export function TestimonialSection() {
+export function TestimonialSection(props: YStackProps) {
   return (
-    <YStack marginTop="$10" space="$8">
+    <YStack space="$8" {...props}>
       <YStack
         justifyContent="space-between"
         alignItems="center"
