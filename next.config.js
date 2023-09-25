@@ -29,6 +29,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-board-game",
+        destination: "https://chat.whatsapp.com/GEDOIx9zFxKKWfzQ42PV1d",
+        permanent: false,
+      },
+      {
         source: "/join-nugas-bareng",
         destination: "https://chat.whatsapp.com/BZJ8yfA9hTQDdTVkk1D8aS",
         permanent: false,
