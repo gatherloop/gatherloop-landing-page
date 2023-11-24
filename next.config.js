@@ -58,6 +58,11 @@ const nextConfig = {
         destination: "https://instagram.com/gatherloop",
         permanent: false,
       },
+      {
+        source: "/oprec-2023",
+        destination: "https://forms.gle/iLrDdmHwj7meVJL26",
+        permanent: false,
+      },
     ];
   },
 };
