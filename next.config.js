@@ -63,6 +63,11 @@ const nextConfig = {
         destination: "https://forms.gle/iLrDdmHwj7meVJL26",
         permanent: false,
       },
+      {
+        source: "/linktree",
+        destination: "https://linktr.ee/gatherloop",
+        permanent: false,
+      },
     ];
   },
 };
