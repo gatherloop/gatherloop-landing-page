@@ -2,6 +2,7 @@ import React from "react";
 import {
   Anchor,
   Button,
+  ButtonProps,
   H3,
   H4,
   Paragraph,
@@ -9,7 +10,6 @@ import {
   YStack,
   YStackProps,
 } from "tamagui";
-import { IconProps } from "@tamagui/lucide-icons/types/IconProps";
 
 export type ItemCardProps = {
   title: string;
@@ -20,7 +20,7 @@ export type ItemCardProps = {
   button?: {
     title: string;
     href: string;
-    icon?: IconProps;
+    icon?: ButtonProps["icon"];
   };
 } & YStackProps;
 

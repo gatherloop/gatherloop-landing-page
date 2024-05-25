@@ -3,7 +3,7 @@ FROM node:16
 WORKDIR /app
 
 COPY . .
-RUN npm install
-RUN npm run build
+RUN yarn
+RUN yarn build
 
 CMD ["npm", "start"]
