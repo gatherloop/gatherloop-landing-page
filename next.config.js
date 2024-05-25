@@ -14,6 +14,11 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
+        source: "/",
+        destination: "https://www.instagram.com/gatherloop.cafe/",
+        permanent: false,
+      },
+      {
         source: "/join",
         destination: "https://chat.whatsapp.com/Fhd16OBC7HtEMSdPUmJR9k",
         permanent: false,
