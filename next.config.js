@@ -73,6 +73,12 @@ const nextConfig = {
         destination: "https://linktr.ee/gatherloop",
         permanent: false,
       },
+      {
+        source: "/menu",
+        destination:
+          "https://drive.google.com/drive/folders/1NwmPmpQ3mFnoadcOFqgqRzLfDXPgrajZ",
+        permanent: false,
+      },
     ];
   },
 };
