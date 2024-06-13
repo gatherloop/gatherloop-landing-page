@@ -39,6 +39,16 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-sport",
+        destination: "https://chat.whatsapp.com/IhYSnjwwpmwEfZLWn2pEO3",
+        permanent: false,
+      },
+      {
+        source: "/join-book",
+        destination: "https://chat.whatsapp.com/FmuPjeuWGPp0qjjHxwV3fa",
+        permanent: false,
+      },
+      {
         source: "/join-nugas-bareng",
         destination: "https://chat.whatsapp.com/BZJ8yfA9hTQDdTVkk1D8aS",
         permanent: false,
