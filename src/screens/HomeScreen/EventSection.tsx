@@ -54,6 +54,8 @@ const events: EventCardProps[] = [
     photoUrls: [
       "/assets/images/EventSport1.jpg",
       "/assets/images/EventSport2.jpg",
+      "/assets/images/EventSport3.jpg",
+      "/assets/images/EventSport4.jpg",
     ],
   },
 ];
