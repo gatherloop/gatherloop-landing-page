@@ -13,7 +13,7 @@ export function Container(props: ContainerProps) {
       $gtXs={{ width: 660 }}
       $gtSm={{ width: 800 }}
       $gtMd={{ width: 1020 }}
-      $gtLg={{ width: 1280 }}
+      $gtLg={{ width: 1080 }}
       paddingHorizontal="$3"
       {...props}
     >

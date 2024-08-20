@@ -1,64 +1,25 @@
-import { Divider } from "@/components";
-import { MapPin } from "@tamagui/lucide-icons";
 import React from "react";
-import { Anchor, Button, H4, Image, Paragraph, XStack, YStack } from "tamagui";
+import { H1, Paragraph, YStack } from "tamagui";
 
 export function LocationSection() {
   return (
-    <YStack marginVertical="$12">
-      <YStack space="$5">
-        <XStack
-          flexWrap="wrap"
-          justifyContent="center"
-          $gtSm={{ justifyContent: "flex-start" }}
-        >
-          <Image
-            maxWidth={480}
-            width="100%"
-            height="auto"
-            marginRight="$0"
-            marginBottom="$3"
-            flexBasis="100%"
-            $gtSm={{ marginRight: "$8", marginBottom: "$8", flexBasis: "40%" }}
-            aspectRatio={1}
-            defaultSource={{ uri: "/assets/images/Location.webp" }}
-            src={{ uri: "/assets/images/Location.webp" }}
-            alt="mentoring"
-            borderRadius="$12"
-          />
-          <YStack flexBasis="100%" $gtSm={{ flexBasis: "40%" }} space="$5">
-            <H4 textAlign="center" $gtSm={{ textAlign: "left" }}>
-              LOKASI BASECAMP
-            </H4>
-            <Divider alignSelf="center" $gtSm={{ alignSelf: "flex-start" }} />
-            <Paragraph
-              size="$9"
-              fontWeight="normal"
-              textAlign="center"
-              $gtSm={{ textAlign: "left" }}
-            >
-              Yuk belajar bersama di basecamp Gatherloop
-            </Paragraph>
-            <Paragraph
-              size="$5"
-              textAlign="center"
-              $gtSm={{ textAlign: "left" }}
-            >
-              Basecamp Gatherloop berlokasi di perumahan new kraksaan land blok
-              G16, Kabupaten Probolinggo.
-            </Paragraph>
-            <XStack
-              justifyContent="center"
-              $gtSm={{ justifyContent: "flex-start" }}
-            >
-              <Anchor href="/location" textDecorationLine="none">
-                <Button theme="blue" icon={MapPin}>
-                  LIHAT LOKASI
-                </Button>
-              </Anchor>
-            </XStack>
-          </YStack>
-        </XStack>
+    <YStack space="$5" id="lokasi">
+      <YStack space="$5" alignItems="center">
+        <H1 textAlign="center">Yuk Datang ke Gatherloop</H1>
+        <Paragraph size="$5" textAlign="center">
+          Perumahan new kraksaan land blok G16, Kraksaan, Probolinggo.
+        </Paragraph>
+      </YStack>
+      <YStack backgroundColor="$gray2" padding="$5" borderRadius="$8">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d988.3423736873073!2d113.440684!3d-7.7505767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd701d59b4cd13d%3A0xcca062879ea93279!2sGatherloop%20Cafe%20%26%20Community!5e0!3m2!1sid!2sid!4v1724152619975!5m2!1sid!2sid"
+          width="100%"
+          height="auto"
+          style={{ aspectRatio: 1, borderRadius: 10, border: "none" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </YStack>
     </YStack>
   );
