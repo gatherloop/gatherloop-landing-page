@@ -1,5 +1,5 @@
 import React from "react";
-import { H1, Image, Paragraph, XStack, YStack } from "tamagui";
+import { Anchor, Button, H1, Image, Paragraph, XStack, YStack } from "tamagui";
 
 const events: EventCardProps[] = [
   {
@@ -15,6 +15,11 @@ const events: EventCardProps[] = [
       "/assets/images/EventBootcampIT3.jpg",
       "/assets/images/EventBootcampIT4.jpg",
     ],
+    joinButtons: [
+      { label: "Ikut Kelas Frontend", href: "/join-frontend" },
+      { label: "Ikut Kelas Backend", href: "/join-backend" },
+      { label: "Ikut Kelas Android", href: "/join-android" },
+    ],
   },
   {
     id: "bedahBuku",
@@ -29,6 +34,7 @@ const events: EventCardProps[] = [
       "/assets/images/EventBedahBuku3.jpg",
       "/assets/images/EventBedahBuku4.jpg",
     ],
+    joinButtons: [{ label: "Join Group Bedah Buku", href: "/join-book" }],
   },
   {
     id: "boardGame",
@@ -42,6 +48,12 @@ const events: EventCardProps[] = [
       "/assets/images/EventBoardGame2.jpg",
       "/assets/images/EventBoardGame3.jpg",
       "/assets/images/EventBoardGame4.jpg",
+    ],
+    joinButtons: [
+      {
+        label: "Join Group Board Game",
+        href: "/join-board-game",
+      },
     ],
   },
   {
@@ -57,6 +69,7 @@ const events: EventCardProps[] = [
       "/assets/images/EventSport3.jpg",
       "/assets/images/EventSport4.jpg",
     ],
+    joinButtons: [{ label: "Join Group Sport", href: "/join-sport" }],
   },
 ];
 
@@ -67,6 +80,7 @@ type EventCardProps = {
   logoUrl: string;
   logoPosition: "left" | "right";
   photoUrls: string[];
+  joinButtons: { label: string; href: string }[];
 };
 
 function EventCard(props: EventCardProps) {
@@ -93,17 +107,16 @@ function EventCard(props: EventCardProps) {
           alt="event logo"
         />
         <YStack
-          flex={1}
           backgroundColor="$gray2"
           padding="$8"
           borderRadius="$5"
+          space="$3"
         >
           <H1
             size="$10"
             textAlign="center"
             $gtSm={{ textAlign: "left" }}
             maxWidth={500}
-            lineHeight={80}
           >
             {props.title}
           </H1>
@@ -115,6 +128,22 @@ function EventCard(props: EventCardProps) {
           >
             {props.description}
           </Paragraph>
+          <XStack
+            gap={12}
+            flexWrap="wrap"
+            justifyContent="center"
+            $gtSm={{ justifyContent: "flex-start" }}
+          >
+            {props.joinButtons.map((joinButton) => (
+              <Anchor
+                key={joinButton.label}
+                href={joinButton.href}
+                textDecorationLine="none"
+              >
+                <Button theme="blue">{joinButton.label}</Button>
+              </Anchor>
+            ))}
+          </XStack>
         </YStack>
       </YStack>
       <XStack gap={15} flexWrap="wrap" justifyContent="center">

@@ -30,12 +30,6 @@ export function FooterSection() {
                   Ikuti Gatherloop
                 </Button>
               </Anchor>
-
-              <Anchor href="/join" textDecorationLine="none">
-                <Button theme="blue" icon={Users}>
-                  Gabung Group
-                </Button>
-              </Anchor>
             </YStack>
           </YStack>
         </YStack>
