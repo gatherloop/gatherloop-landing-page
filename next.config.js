@@ -13,11 +13,6 @@ const withTamagui = createWithTamagui({
 const nextConfig = {
   redirects: async () => {
     return [
-      // {
-      //   source: "/",
-      //   destination: "https://www.instagram.com/gatherloop.cafe/",
-      //   permanent: false,
-      // },
       {
         source: "/join",
         destination: "https://chat.whatsapp.com/Fhd16OBC7HtEMSdPUmJR9k",
@@ -54,18 +49,8 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/join-nugas-bareng",
-        destination: "https://chat.whatsapp.com/BZJ8yfA9hTQDdTVkk1D8aS",
-        permanent: false,
-      },
-      {
-        source: "/form-nugas-bareng",
-        destination: "https://forms.gle/7Df8igJt7RdszbMe9",
-        permanent: false,
-      },
-      {
-        source: "/form-private-mentoring",
-        destination: "https://forms.gle/Z11WnHmvzcE53RyX7",
+        source: "/join-business",
+        destination: "https://chat.whatsapp.com/JE4rcgQFqMd08f9ztLVVYr",
         permanent: false,
       },
       {
@@ -76,11 +61,6 @@ const nextConfig = {
       {
         source: "/instagram",
         destination: "https://instagram.com/gatherloop",
-        permanent: false,
-      },
-      {
-        source: "/oprec-2023",
-        destination: "https://forms.gle/iLrDdmHwj7meVJL26",
         permanent: false,
       },
       {
