@@ -54,6 +54,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-basic-programming",
+        destination: "https://chat.whatsapp.com/KGUb7sFokxuLVHl1ndNKiW",
+        permanent: false,
+      },
+      {
         source: "/location",
         destination: "https://goo.gl/maps/8cR4VM6ZS7XWDPXZ8",
         permanent: false,
