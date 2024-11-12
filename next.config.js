@@ -14,6 +14,12 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
+        source: "/schedule",
+        destination:
+          "https://calendar.google.com/calendar/embed?src=3a6c47cd8bd16c15796054cbcf8b90a9c46c4cf2bc4ebe03d17009c44faf5ba7%40group.calendar.google.com&ctz=Asia%2FJakarta",
+        permanent: false,
+      },
+      {
         source: "/join",
         destination: "https://chat.whatsapp.com/Fhd16OBC7HtEMSdPUmJR9k",
         permanent: false,
