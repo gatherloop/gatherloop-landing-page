@@ -65,6 +65,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-english",
+        destination: "https://chat.whatsapp.com/I77oI5Jo6qb5RSdEVO5u2c",
+        permanent: false,
+      },
+      {
         source: "/location",
         destination: "https://goo.gl/maps/8cR4VM6ZS7XWDPXZ8",
         permanent: false,
