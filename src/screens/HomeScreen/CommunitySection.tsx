@@ -70,7 +70,7 @@ export function CommunityCard(props: CommunityCardProps) {
       <Image
         width="100%"
         height={200}
-        src={{ uri: "/assets/images/Location.webp" }}
+        source={{ uri: "/assets/images/Location.webp" }}
         defaultSource={{ uri: "/assets/images/Location.webp" }}
         alt="hero image"
       />

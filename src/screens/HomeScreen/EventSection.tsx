@@ -95,17 +95,19 @@ function EventCard(props: EventCardProps) {
           alignItems: "flex-start",
         }}
       >
-        <Image
-          maxWidth={280}
-          width="100%"
-          height="auto"
-          aspectRatio={1}
-          flex={1}
-          flexBasis="100%"
-          src={{ uri: props.logoUrl }}
-          defaultSource={{ uri: props.logoUrl }}
-          alt="event logo"
-        />
+        <YStack>
+          <Image
+            width="100%"
+            height="auto"
+            aspectRatio={1}
+            flex={1}
+            flexBasis="100%"
+            source={{ uri: props.logoUrl, width: 280 }}
+            defaultSource={{ uri: props.logoUrl }}
+            alt="event logo"
+          />
+        </YStack>
+
         <YStack
           backgroundColor="$gray2"
           padding="$8"
@@ -153,7 +155,7 @@ function EventCard(props: EventCardProps) {
               width="100%"
               height="auto"
               aspectRatio={1}
-              src={{ uri: photoUrl }}
+              source={{ uri: photoUrl }}
               defaultSource={{ uri: photoUrl }}
               alt="photo image"
             />

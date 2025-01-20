@@ -67,20 +67,19 @@ export function HeroSection() {
           berkolaborasi dengan banyak komunitas
         </Paragraph>
       </YStack>
-      <Image
-        borderRadius="$12"
-        maxWidth={360}
-        width="100%"
-        height="auto"
-        aspectRatio={1}
-        flex={1}
-        flexBasis="100%"
-        src={{ uri: "/assets/images/Hero.png" }}
-        defaultSource={{ uri: "/assets/images/Hero.png" }}
-        alt="hero image"
-        display="none"
-        $gtSm={{ display: "block" }}
-      />
+      <YStack>
+        <Image
+          borderRadius="$12"
+          aspectRatio={1}
+          width="100%"
+          height="100%"
+          source={{ uri: "/assets/images/Hero.png", width: 360 }}
+          defaultSource={{ uri: "/assets/images/Hero.png" }}
+          alt="hero image"
+          display="none"
+          $gtSm={{ display: "block" }}
+        />
+      </YStack>
     </YStack>
   );
 }

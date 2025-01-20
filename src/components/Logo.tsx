@@ -1,5 +1,5 @@
 import React from "react";
-import { useThemeName } from "tamagui";
+import { useThemeName, YStack } from "tamagui";
 import { Image } from "tamagui";
 
 export type LogoProps = {
@@ -14,15 +14,17 @@ export function Logo(props: LogoProps) {
       ? "/assets/images/GatherloopLogoDarkTheme.png"
       : "/assets/images/GatherloopLogoLightTheme.png";
   return (
-    <Image
-      alt="Gatherloop Logo"
-      aspectRatio={props.width / props.height}
-      maxWidth={props.width}
-      width="100%"
-      height="auto"
-      src={src}
-      defaultSource={{ uri: src }}
-    />
+    <YStack>
+      <Image
+        alt="Gatherloop Logo"
+        aspectRatio={props.width / props.height}
+        maxWidth={props.width}
+        width="100%"
+        height="auto"
+        source={{ uri: src, width: props.width, height: props.height }}
+        defaultSource={{ uri: src }}
+      />
+    </YStack>
   );
 }
 

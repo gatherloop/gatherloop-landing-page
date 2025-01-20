@@ -21,7 +21,7 @@ export function CafeSection() {
               width="100%"
               height="auto"
               aspectRatio={1}
-              src={{ uri: imageUrl }}
+              source={{ uri: imageUrl }}
               defaultSource={{ uri: imageUrl }}
               alt="hero image"
             />

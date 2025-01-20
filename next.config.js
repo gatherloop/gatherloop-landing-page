@@ -1,3 +1,5 @@
+// @ts-check
+
 const { withTamagui: createWithTamagui } = require("@tamagui/next-plugin");
 
 process.env.TAMAGUI_TARGET = "web";
@@ -7,10 +9,21 @@ const withTamagui = createWithTamagui({
   components: ["tamagui"],
   useReactNativeWebLite: true,
   disableExtraction: process.env.NODE_ENV === "development",
-  excludeReactNativeWebExports: ["Switch", "ProgressBar", "Picker"],
 });
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  webpack: (config) => {
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve.alias,
+        "react-native-svg": "react-native-svg-web",
+        "react-native": "react-native-web",
+      },
+    };
+    return config;
+  },
   redirects: async () => {
     return [
       {
