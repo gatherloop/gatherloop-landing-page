@@ -5,7 +5,7 @@ import { NextThemeProvider, useRootTheme } from "@tamagui/next-theme";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React, { useMemo } from "react";
-import { TamaguiProvider } from "tamagui";
+import { TamaguiProvider, YStack } from "tamagui";
 
 // import the config you just exported from the tamagui.config.ts file
 import { appConfig } from "../tamagui.config";
@@ -13,25 +13,23 @@ import { appConfig } from "../tamagui.config";
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useRootTheme();
 
-  const contents = useMemo(() => {
-    return <Component {...pageProps} />;
-  }, [pageProps]);
-
   return (
     <>
       <Head>
-        <title>Your page title</title>
+        <title>Gatherloop Cafe & Community</title>
         <meta name="description" content="Your page description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NextThemeProvider onChangeTheme={setTheme as any}>
+      <NextThemeProvider onChangeTheme={setTheme as any} forcedTheme="dark">
         <TamaguiProvider
           config={appConfig}
           disableInjectCSS
           disableRootThemeClass
           defaultTheme={theme}
         >
-          {contents}
+          <YStack theme="blue">
+            <Component {...pageProps} />
+          </YStack>
         </TamaguiProvider>
       </NextThemeProvider>
     </>

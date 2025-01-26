@@ -14,17 +14,14 @@ export function Logo(props: LogoProps) {
       ? "/assets/images/GatherloopLogoDarkTheme.png"
       : "/assets/images/GatherloopLogoLightTheme.png";
   return (
-    <YStack>
-      <Image
-        alt="Gatherloop Logo"
-        aspectRatio={props.width / props.height}
-        maxWidth={props.width}
-        width="100%"
-        height="auto"
-        source={{ uri: src, width: props.width, height: props.height }}
-        defaultSource={{ uri: src }}
-      />
-    </YStack>
+    <Image
+      alt="Gatherloop Logo"
+      aspectRatio={props.width / props.height}
+      maxWidth={props.width}
+      width="100%"
+      height="auto"
+      source={{ uri: src, width: props.width, height: props.height }}
+    />
   );
 }
 

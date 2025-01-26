@@ -5,18 +5,23 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document";
-
-// import the config you just exported from the tamagui.config.ts file
 import { appConfig } from "../tamagui.config";
+import { AppRegistry } from "react-native";
 
 export default class Document extends NextDocument {
   static async getInitialProps({ renderPage }: DocumentContext) {
+    AppRegistry.registerComponent("Main", () => Main);
+
     const page = await renderPage();
+
+    // @ts-ignore
+    const { getStyleElement } = AppRegistry.getApplication("Main");
 
     return {
       ...page,
       styles: (
         <>
+          {getStyleElement()}
           <style
             dangerouslySetInnerHTML={{
               __html: appConfig.getCSS(),

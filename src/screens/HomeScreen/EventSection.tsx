@@ -3,10 +3,9 @@ import { Anchor, Button, H1, Image, Paragraph, XStack, YStack } from "tamagui";
 
 const events: EventCardProps[] = [
   {
-    id: "bootcampIT",
-    title: "Bootcamp IT",
+    title: "Software Engineer",
     description:
-      "Gatherloop mengadakan bootcamp IT mingguan dengan topik menarik seputar Frontend, Backend, dan Android. Program ini dirancang khusus untuk kamu yang ingin memperdalam pengetahuan di bidang teknologi.",
+      "Gatherloop punya komunitas software engineer buat kamu yang mau belajar seputar Frontend, Backend, dan Android develoment. Seminggu sekali akan ada meetup dimana kamu bisa konsultasi dan belajar bareng teman teman yang lain.",
     logoUrl: "/assets/images/BootcampIT.png",
     logoPosition: "left",
     photoUrls: [
@@ -16,33 +15,46 @@ const events: EventCardProps[] = [
       "/assets/images/EventBootcampIT4.jpg",
     ],
     joinButtons: [
-      { label: "Ikut Kelas Frontend", href: "/join-frontend" },
-      { label: "Ikut Kelas Backend", href: "/join-backend" },
-      { label: "Ikut Kelas Android", href: "/join-android" },
+      { label: "Join Basic Programming", href: "/join-basic-programming" },
+      { label: "Join Frontend", href: "/join-frontend" },
+      { label: "Join Backend", href: "/join-backend" },
+      { label: "Join Android", href: "/join-android" },
     ],
   },
   {
-    id: "bedahBuku",
+    title: "English Day",
+    description:
+      "Seminggu sekali, Gatherloop ngadain english day dimana kamu bakalan bisa ngelatih kemampuan berbahasa inggrismu. Gabung ke grup untuk lihat jadwalnya",
+    logoUrl: "/assets/images/BootcampIT.png",
+    logoPosition: "right",
+    photoUrls: [
+      "/assets/images/Thumbnail.svg",
+      "/assets/images/Thumbnail.svg",
+      "/assets/images/Thumbnail.svg",
+      "/assets/images/Thumbnail.svg",
+    ],
+    joinButtons: [{ label: "Join English Day", href: "/join-english" }],
+  },
+  {
     title: "Bedah Buku",
     description:
       "Gatherloop menjadi tempat berkumpulnya para pecinta buku yang secara rutin mengadakan event bedah buku setiap bulan. Di setiap acara, satu judul buku akan dibahas secara mendalam untuk menggali isi dan poin-poin pentingnya",
     logoUrl: "/assets/images/BedahBuku.png",
-    logoPosition: "right",
+    logoPosition: "left",
     photoUrls: [
       "/assets/images/EventBedahBuku1.jpg",
       "/assets/images/EventBedahBuku2.jpg",
       "/assets/images/EventBedahBuku3.jpg",
       "/assets/images/EventBedahBuku4.jpg",
     ],
-    joinButtons: [{ label: "Join Group Bedah Buku", href: "/join-book" }],
+    joinButtons: [{ label: "Join Bedah Buku", href: "/join-book" }],
   },
   {
-    id: "boardGame",
     title: "Board Game",
     description:
-      "Gatherloop memiliki berbagai koleksi board game, seperti Monopoly, Ular Tangga, Catur, Catan, dan masih banyak lagi. Nikmati waktu bermain bersama teman di event board game yang diadakan setiap akhir pekan",
+      "Pengen main board game tapi gak punya temen ? Jangan hawatir, kamu tinggal join komunitas board game Gatherloop dan cari teman main",
     logoUrl: "/assets/images/PlayDay.png",
-    logoPosition: "left",
+    logoPosition: "right",
     photoUrls: [
       "/assets/images/EventBoardGame1.jpg",
       "/assets/images/EventBoardGame2.jpg",
@@ -51,30 +63,28 @@ const events: EventCardProps[] = [
     ],
     joinButtons: [
       {
-        label: "Join Group Board Game",
+        label: "Join Board Game",
         href: "/join-board-game",
       },
     ],
   },
   {
-    id: "sport",
     title: "Sport",
     description:
       "Di Gatherloop, menjaga kesehatan dan kebugaran sama pentingnya dengan mengasah keterampilan. Oleh karena itu, kami rutin mengadakan kegiatan olahraga seperti futsal dan bulu tangkis bersama.",
     logoUrl: "/assets/images/Sport.png",
-    logoPosition: "right",
+    logoPosition: "left",
     photoUrls: [
       "/assets/images/EventSport1.jpg",
       "/assets/images/EventSport2.jpg",
       "/assets/images/EventSport3.jpg",
       "/assets/images/EventSport4.jpg",
     ],
-    joinButtons: [{ label: "Join Group Sport", href: "/join-sport" }],
+    joinButtons: [{ label: "Join Sport", href: "/join-sport" }],
   },
 ];
 
 type EventCardProps = {
-  id: string;
   title: string;
   description: string;
   logoUrl: string;
@@ -85,7 +95,7 @@ type EventCardProps = {
 
 function EventCard(props: EventCardProps) {
   return (
-    <YStack padding="$8" space="$8" id={props.id}>
+    <YStack padding="$8" space="$8">
       <YStack
         alignItems="center"
         justifyContent="center"
@@ -95,21 +105,19 @@ function EventCard(props: EventCardProps) {
           alignItems: "flex-start",
         }}
       >
-        <YStack>
-          <Image
-            width="100%"
-            height="auto"
-            aspectRatio={1}
-            flex={1}
-            flexBasis="100%"
-            source={{ uri: props.logoUrl, width: 280 }}
-            defaultSource={{ uri: props.logoUrl }}
-            alt="event logo"
-          />
-        </YStack>
-
+        <Image
+          width="100%"
+          maxWidth={280}
+          height="auto"
+          aspectRatio={1}
+          flex={1}
+          flexBasis="100%"
+          source={{ uri: props.logoUrl }}
+          defaultSource={{ uri: props.logoUrl }}
+          alt="event logo"
+        />
         <YStack
-          backgroundColor="$gray2"
+          backgroundColor="$background"
           padding="$8"
           borderRadius="$5"
           space="$3"
@@ -142,7 +150,7 @@ function EventCard(props: EventCardProps) {
                 href={joinButton.href}
                 textDecorationLine="none"
               >
-                <Button theme="blue">{joinButton.label}</Button>
+                <Button>{joinButton.label}</Button>
               </Anchor>
             ))}
           </XStack>
@@ -168,21 +176,9 @@ function EventCard(props: EventCardProps) {
 
 export function EventSection() {
   return (
-    <YStack justifyContent="center" paddingVertical="$10" space="$5">
-      <YStack gap={15} alignItems="center">
-        <YStack maxWidth={600}>
-          <H1 size="$10" textAlign="center">
-            Perluas Wawasan dan Relasimu Lewat Event Gatherloop
-          </H1>
-          <Paragraph size="$5" textAlign="center">
-            Gatherloop memiliki banyak event seru yang dapat kamu ikuti untuk
-            menambah wawasan dan relasi sesuai dengan minatmu
-          </Paragraph>
-        </YStack>
-      </YStack>
-
+    <YStack paddingVertical="$10" space="$5">
       {events.map((event) => (
-        <EventCard key={event.id} {...event} />
+        <EventCard key={event.title} {...event} />
       ))}
     </YStack>
   );
