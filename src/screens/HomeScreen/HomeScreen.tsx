@@ -1,13 +1,12 @@
 import React from "react";
 import { Instagram, Menu } from "@tamagui/lucide-icons";
-import { ScrollView, useThemeName, YStack } from "tamagui";
+import { ScrollView, YStack } from "tamagui";
 import {
   HeroWithImageBackground,
   HeroWithAccent,
   ImageGallery,
   Layout,
   Navbar,
-  EventCalendar,
   PageHeader,
   Footer,
   Container,
@@ -23,7 +22,6 @@ const links = [
   { title: "Menu", href: "#menu" },
   { title: "Promo", href: "#promo" },
   { title: "Fasilitas", href: "#fasilitas" },
-  { title: "Kegiatan", href: "#kegiatan" },
   { title: "Komunitas", href: "#komunitas" },
   { title: "Lokasi", href: "#lokasi" },
 ];
@@ -56,20 +54,29 @@ export function HomeScreen(_props: HomeScreenProps) {
               <YStack id="suasana">
                 <ImageGallery
                   imageSources={[
-                    "/assets/images/Cafe-1.jpg",
-                    "/assets/images/Cafe-2.jpg",
-                    "/assets/images/Cafe-3.jpg",
-                    "/assets/images/Cafe-4.jpg",
-                    "/assets/images/Cafe-5.jpg",
-                    "/assets/images/Cafe-6.jpg",
-                    "/assets/images/Cafe-7.jpg",
-                    "/assets/images/Cafe-8.jpg",
-                    "/assets/images/Cafe-9.jpg",
-                    "/assets/images/Cafe-10.jpg",
-                    "/assets/images/Cafe-11.jpg",
-                    "/assets/images/Cafe-12.jpg",
+                    "/assets/images/Cafe1.jpg",
+                    "/assets/images/Cafe2.jpg",
+                    "/assets/images/Cafe3.jpg",
+                    "/assets/images/Cafe4.jpg",
+                    "/assets/images/Cafe5.jpg",
+                    "/assets/images/Cafe6.jpg",
+                    "/assets/images/Cafe7.jpg",
+                    "/assets/images/Cafe8.jpg",
+                    "/assets/images/Cafe9.jpg",
+                    "/assets/images/Cafe10.jpg",
+                    "/assets/images/Cafe11.jpg",
+                    "/assets/images/Cafe12.jpg",
+                    "/assets/images/Cafe13.jpg",
+                    "/assets/images/Cafe14.jpg",
+                    "/assets/images/Cafe15.jpg",
+                    "/assets/images/Cafe16.jpg",
+                    "/assets/images/Cafe17.jpg",
+                    "/assets/images/Cafe18.jpg",
+                    "/assets/images/Cafe19.jpg",
+                    "/assets/images/Cafe20.jpg",
+                    "/assets/images/Cafe21.jpg",
                   ]}
-                  maxColumn={4}
+                  maxColumn={3}
                   align="center"
                   title="Suasana Gatherloop"
                   subtitle="Tempat yang nyaman untuk kumpul, kerja, dan bersantai"
@@ -105,8 +112,7 @@ export function HomeScreen(_props: HomeScreenProps) {
                       title: "Pancong",
                       subtitle:
                         "Lembutnya adonan kue bertemu dengan krim manis yang lumer dan beraneka rasa, seperti coklat, keju, matcha, taro, dll",
-                      imageSource:
-                        "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/43ffdd3f-33b7-4d1a-be7b-19d0da9f0dd7_Go-Biz_20231226_153401.jpeg",
+                      imageSource: "/assets/images/MenuPancong.jpg",
                     },
                     {
                       title: "Ayam Crispy",
@@ -119,8 +125,7 @@ export function HomeScreen(_props: HomeScreenProps) {
                       title: "Mie Gather",
                       subtitle:
                         "Mie pedas yang bikin nagih dengan bumbu spesial, bisa juga dinikmati dengan kuah miso",
-                      imageSource:
-                        "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1pZSUyMGF5YW18ZW58MHx8MHx8fDA%3D",
+                      imageSource: "/assets/images/MenuMieGather.jpg",
                     },
                   ]}
                 />
@@ -131,12 +136,13 @@ export function HomeScreen(_props: HomeScreenProps) {
               <YStack id="promo">
                 <HeroWithAccent
                   tag="Promo"
-                  title="Nongkrong Lebih Hemat dengan Promo Gatherloop"
-                  subtitle="Tenang, nongkrong di Gatherloop gak bakal bikin kantong kamu kering, yuk cek promo Gatherloop sekarang juga"
+                  title="Kopi Pagi & Sore"
+                  subtitle="Dapatkan potongan harga Rp. 2000 untuk setiap pembelian kopi di pagi dan sore hari"
                   imageSource="/assets/images/promo.jpg"
                   primaryButton={{
                     label: "Lihat Promo",
-                    onPress: () => {},
+                    onPress: () =>
+                      window.open("https://www.instagram.com/p/DFmLM5QPGj0/"),
                   }}
                 />
               </YStack>
@@ -181,7 +187,8 @@ export function HomeScreen(_props: HomeScreenProps) {
               </YStack>
             </Container>
 
-            <Container>
+            {/* TODO: integrate to public google calendar later  */}
+            {/* <Container>
               <YStack id="kegiatan">
                 <EventCalendar
                   tag="Event"
@@ -191,8 +198,8 @@ export function HomeScreen(_props: HomeScreenProps) {
                   maxColumn={4}
                   events={[
                     {
-                      title: "Gatherloop Connect & Learn",
-                      datetime: "2025-02-01T12:00:00Z",
+                      title: "Bedah Buku - ",
+                      datetime: "2025-02-06T12:00:00Z",
                       imageSource: "/assets/images/Thumbnail.svg",
                     },
                     {
@@ -273,7 +280,7 @@ export function HomeScreen(_props: HomeScreenProps) {
                   ]}
                 />
               </YStack>
-            </Container>
+            </Container> */}
 
             <Container>
               <YStack id="komunitas">
