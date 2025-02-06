@@ -1,6 +1,7 @@
 // Optional: add the reset to get more consistent styles across browsers
 import "@tamagui/core/reset.css";
 
+// @ts-ignore
 import { NextThemeProvider, useRootTheme } from "@tamagui/next-theme";
 import { AppProps } from "next/app";
 import Head from "next/head";
