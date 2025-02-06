@@ -3,8 +3,13 @@ import { Features } from "tamakit";
 export function MenuSection() {
   return (
     <Features
+      tag="Menu"
       title="Menu Favorit Gatherloop"
       subtitle="Nikmati pilihan menu favorit di Gatherloop yang akan menemani nongkrongmu"
+      primaryButton={{
+        label: "Lihat Semua Menu",
+        onPress: () => window.open("https://gatherloop.co/menu"),
+      }}
       items={[
         {
           title: "Kopi",

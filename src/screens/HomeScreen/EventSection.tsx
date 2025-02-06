@@ -27,6 +27,7 @@ export function EventSection() {
             datetime: item.values.Start,
             imageSource:
               item.values["Image URL"] || "/assets/images/Thumbnail.svg",
+            href: item.values["Event URL"],
           }))
         );
       });

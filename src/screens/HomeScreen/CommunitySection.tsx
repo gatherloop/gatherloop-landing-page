@@ -26,7 +26,7 @@ const events: EventCardProps[] = [
     title: "English Day",
     description:
       "Seminggu sekali, Gatherloop ngadain english day dimana kamu bakalan bisa ngelatih kemampuan berbahasa inggrismu. Gabung ke grup untuk lihat jadwalnya",
-    logoUrl: "/assets/images/BootcampIT.png",
+    logoUrl: "/assets/images/EnglishDay.png",
     logoPosition: "right",
     photoUrls: [
       "/assets/images/Thumbnail.svg",

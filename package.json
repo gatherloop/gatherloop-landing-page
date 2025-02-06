@@ -35,7 +35,7 @@
     "react-svg": "^16.1.2",
     "storybook-addon-next-router": "^4.0.2",
     "tamagui": "^1.121.12",
-    "tamakit": "^0.0.32",
+    "tamakit": "^0.0.33",
     "typescript": "4.9.4"
   },
   "devDependencies": {
