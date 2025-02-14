@@ -13812,10 +13812,10 @@ tamagui@^1.123.4:
     "@tamagui/use-window-dimensions" "1.123.4"
     "@tamagui/visually-hidden" "1.123.4"
 
-tamakit@^0.0.33:
-  version "0.0.33"
-  resolved "https://registry.npmjs.org/tamakit/-/tamakit-0.0.33.tgz"
-  integrity sha512-Qa0g7MddHKMCjGY8tOs1Y0LvGHARfbTS+Ekf9mQhareZH+JAhEWRVb0IzcMquXiyR/C/cEx19oZANdcJQHRyPA==
+tamakit@^0.0.34:
+  version "0.0.34"
+  resolved "https://registry.npmjs.org/tamakit/-/tamakit-0.0.34.tgz"
+  integrity sha512-sYUCAhS4B4za6WLYg7isz96SO/AUJs7fkiyKC16tRvW8/yYnZji2ZBvx9TR39AyRuwO4El+aB1qHa53GWi+aJg==
   dependencies:
     dayjs "^1.11.13"
 
