@@ -28,7 +28,7 @@ const nextConfig = {
     return [
       {
         source: "/join",
-        destination: "https://chat.whatsapp.com/Fhd16OBC7HtEMSdPUmJR9k",
+        destination: "https://linktr.ee/gatherloop",
         permanent: false,
       },
       {
