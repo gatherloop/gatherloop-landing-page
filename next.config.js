@@ -42,6 +42,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-web",
+        destination: "https://chat.whatsapp.com/CGwWy6ZSAZJHDxya6PjQDY",
+        permanent: false,
+      },
+      {
         source: "/join-android",
         destination: "https://chat.whatsapp.com/J5roSLbzKQj7uGTLXizKTi",
         permanent: false,
