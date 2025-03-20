@@ -97,12 +97,6 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/menu",
-        destination:
-          "https://drive.google.com/drive/folders/1NwmPmpQ3mFnoadcOFqgqRzLfDXPgrajZ",
-        permanent: false,
-      },
-      {
         source: "/menu-board-game",
         destination: "https://coda.io/@mnindrazaka/board-game",
         permanent: false,
