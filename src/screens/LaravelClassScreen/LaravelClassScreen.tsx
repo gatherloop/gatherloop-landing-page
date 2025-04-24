@@ -105,6 +105,7 @@ export function LaravelClassScreen() {
                                 "Keunggulan Laravel dibanding framework lain",
                                 "Instalasi Laravel menggunakan Composer",
                                 "Struktur folder dalam Laravel",
+                                "Tips & Tricks: Setup environment Laravel yang optimal untuk development"
                             ],
                         },
                         {
@@ -117,6 +118,7 @@ export function LaravelClassScreen() {
                                 "Route dengan parameter",
                                 "Named routes",
                                 "Middleware dasar",
+                                "Tips & Tricks: Teknik routing yang efisien untuk aplikasi skala besar"
                             ],
                         },
                         {
@@ -128,6 +130,7 @@ export function LaravelClassScreen() {
                                 "Template inheritance (@extends, @section, @yield)",
                                 "Blade directives (@if, @foreach, @include, dll)",
                                 "Component dan slot",
+                                "Tips & Tricks: Mengorganisir Blade Components untuk maintainability yang lebih baik"
                             ],
                         },
                         {
@@ -139,6 +142,7 @@ export function LaravelClassScreen() {
                                 "Menghubungkan controller dengan route",
                                 "Menggunakan Request untuk menangani data dari form",
                                 "Validasi request dasar",
+                                "Tips & Tricks: Implementasi Form Request untuk validasi yang lebih terstruktur"
                             ],
                         },
                         {
@@ -150,6 +154,7 @@ export function LaravelClassScreen() {
                                 "Migrasi database ( php artisan migrate )",
                                 "Seeding dan factory untuk dummy data",
                                 "Relasi antar tabel (One to One, One to Many, Many to Many)",
+                                "Tips & Tricks: Memaksimalkan Eloquent query untuk performance yang lebih baik"
                             ],
                         },
                         {
@@ -162,6 +167,7 @@ export function LaravelClassScreen() {
                                 "Menampilkan data dari database",
                                 "Menghapus data dari database",
                                 "Flash messages untuk notifikasi sukses / gagal",
+                                "Tips & Tricks: Mengimplementasikan soft delete dan restore data"
                             ],
                         },
                         {
@@ -172,6 +178,7 @@ export function LaravelClassScreen() {
                                 "Pengenalan sistem autentikasi Laravel ( Laravel Breeze / Jetstream) ",
                                 "Middleware untuk proteksi halaman",
                                 "Role-based access control (dasar)",
+                                "Tips & Tricks: Customizing authentication flow sesuai kebutuhan aplikasi"
                             ],
                         },
                         {
@@ -182,7 +189,8 @@ export function LaravelClassScreen() {
                                 "Instalasi Laravel dan konfigurasi Laravel Fortify",
                                 "Setup Laravel Fortify untuk autentikasi ( Login, Register, Logout, Reset Password )",
                                 "Layouting form login dan register menggunakan Blade dan Modernize Bootstrap 5",
-                                "Implementasi middleware untuk proteksi dashboard"
+                                "Implementasi middleware untuk proteksi dashboard",
+                                "Tips & Tricks: Mengoptimalkan proses authentication dengan Laravel Fortify"
                             ]
                         },
                         {
@@ -193,7 +201,8 @@ export function LaravelClassScreen() {
                                 "Strukturisasi file dengan Blade templating untuk layout yang rapi",
                                 "Setup layouting website booking tiket menggunakan Blade",
                                 "Setup layouting dashboard admin Modernize Bootstrap 5",
-                                "Implementasi sistem komponen Blade agar modular"
+                                "Implementasi sistem komponen Blade agar modular",
+                                "Tips & Tricks: Teknik slicing yang efektif dengan pendekatan mobile-first design"
                             ]
                         },
                         {
@@ -202,7 +211,8 @@ export function LaravelClassScreen() {
                             imageSource: "/assets/images/database.png",
                             subtopics: [
                                 "Menggunakan database migrations untuk membuat tabel",
-                                "Mengisi database dengan Laravel Seeder dan Factory untuk user dan data awal"
+                                "Mengisi database dengan Laravel Seeder dan Factory untuk user dan data awal",
+                                "Tips & Tricks: Mendesain relasi tabel yang scalable untuk aplikasi event booking"
                             ]
                         },
                         {
@@ -212,7 +222,20 @@ export function LaravelClassScreen() {
                             subtopics: [
                                 "CRUD untuk events ( admin dapat menambah, mengedit, menghapus event )",
                                 "Sistem kategori dan status event",
-                                "Menampilkan daftar event dengan filter pencarian"
+                                "Menampilkan daftar event dengan filter pencarian",
+                                "Tips & Tricks: Optimasi pencarian event dengan teknik indexing database"
+                            ]
+                        },
+                        {
+                            title: "Implementasi Fitur Tiket Event",
+                            description: "Mengelola sistem tiket untuk event",
+                            imageSource: "/assets/images/ticket.png",
+                            subtopics: [
+                                "Pembuatan sistem multi-tiket untuk satu event (Regular, VIP, VVIP)",
+                                "Setting kuota dan harga tiket",
+                                "Manajemen tiket yang terjual dan tersisa",
+                                "Implementasi promo code dan diskon untuk tiket",
+                                "Tips & Tricks: Strategi pengelolaan tiket untuk mencegah overselling"
                             ]
                         },
                         {
@@ -224,7 +247,21 @@ export function LaravelClassScreen() {
                                 "Sistem pemesanan event dengan jumlah tiket yang bisa dibeli",
                                 "Menghubungkan event dengan stok yang tersedia",
                                 "Implementasi metode pembayaran ( sementara bisa manual dengan upload bukti transfer )",
-                                "Status pembayaran dan verifikasi order"
+                                "Status pembayaran dan verifikasi order",
+                                "Tips & Tricks: Implementasi cart abandonement notification untuk meningkatkan conversion rate"
+                            ]
+                        },
+                        {
+                            title: "Integrasi Payment Gateway (Midtrans)",
+                            description: "Menghubungkan aplikasi dengan payment gateway Midtrans",
+                            imageSource: "/assets/images/payment.png",
+                            subtopics: [
+                                "Setup dan konfigurasi Midtrans pada Laravel",
+                                "Implementasi Snap Payment untuk proses checkout",
+                                "Handling callback dan notifikasi pembayaran",
+                                "Implementasi multiple payment methods (QRIS, Virtual Account, E-Wallet)",
+                                "Manajemen status transaksi sesuai callback Midtrans",
+                                "Tips & Tricks: Mengamankan payment flow dari vulnerabilities dan upaya fraud"
                             ]
                         },
                         {
@@ -234,7 +271,8 @@ export function LaravelClassScreen() {
                             subtopics: [
                                 "Dashboard admin atau operator untuk mengelola event dan melihat statistik penjualan",
                                 "Dashboard user untuk melihat histori pembelian dan status order",
-                                "Implementasi chart atau grafik untuk analisis data event"
+                                "Implementasi chart atau grafik untuk analisis data event",
+                                "Tips & Tricks: Teknik visualisasi data yang efektif untuk membaca tren penjualan"
                             ]
                         },
                         {
@@ -244,7 +282,8 @@ export function LaravelClassScreen() {
                             subtopics: [
                                 "Notifikasi ke user setelah sukses booking event",
                                 "Pengiriman email atau pesan konfirmasi ke user",
-                                "Notifikasi admin untuk pesanan baru"
+                                "Notifikasi admin untuk pesanan baru",
+                                "Tips & Tricks: Mengoptimalkan deliverability email melalui service seperti Mailgun/Sendgrid"
                             ]
                         },
                     ]}
@@ -255,7 +294,7 @@ export function LaravelClassScreen() {
                 tag="Mentor"
                 title="Halo, Saya Maman"
                 subtitle="Saya adalah seorang Fullstack Developer yang memiliki pengalaman dalam membangun aplikasi web menggunakan Laravel, serta berbagai teknologi modern lainnya. Saya akan menjadi mentor Anda selama mengikuti kelas pembuatan Website Booking Event menggunakan Laravel, dan siap membantu Anda dalam menyelesaikan project hingga Anda benar-benar bisa membuat aplikasi web dengan Laravel, jadi tunggu apalagi? Ayo bergabung sekarang!"
-                imageSource="https://media.licdn.com/dms/image/v2/D5603AQFDUGGb6YcyJA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707102360564?e=1744848000&v=beta&t=-W148IF2DcqBHxAAMYGn8ay9skkl3fFZUnTefBZ-kCY"
+                imageSource="https://media.licdn.com/dms/image/v2/D5603AQFHgA-G_jozVA/profile-displayphoto-shrink_800_800/B56ZYPzsQ0HEAc-/0/1744021932069?e=1750896000&v=beta&t=oqSU2c4ENwOlXWMFC7WVG4qSdlHeVhMzCEJDmr2GHSs"
                 primaryButton={{
                   label: "LinkedIn",
                   onPress: () =>
