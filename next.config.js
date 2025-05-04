@@ -27,6 +27,11 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
+        source: "/board-game-timer",
+        destination: "https://board-game-timer.onrender.com",
+        permanent: false,
+      },
+      {
         source: "/join",
         destination: "https://linktr.ee/gatherloop",
         permanent: false,
