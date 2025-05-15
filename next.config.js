@@ -28,7 +28,7 @@ const nextConfig = {
     return [
       {
         source: "/board-game-timer",
-        destination: "https://board-game-timer.onrender.com",
+        destination: "https://board-game-timer-f7bk.onrender.com",
         permanent: false,
       },
       {
