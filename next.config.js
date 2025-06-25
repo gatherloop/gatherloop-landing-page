@@ -82,6 +82,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/join-software-engineer",
+        destination: "https://chat.whatsapp.com/KGUb7sFokxuLVHl1ndNKiW",
+        permanent: false,
+      },
+      {
         source: "/join-english",
         destination: "https://chat.whatsapp.com/I77oI5Jo6qb5RSdEVO5u2c",
         permanent: false,
