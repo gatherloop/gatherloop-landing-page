@@ -26,6 +26,20 @@ export function MenuScreen() {
           source={{ uri: "/assets/images/Menu3.png" }}
           alt="Menu3"
         />
+        <Image
+          width="100%"
+          aspectRatio={840 / 1190}
+          defaultSource={{ uri: "/assets/images/Menu4.png" }}
+          source={{ uri: "/assets/images/Menu4.png" }}
+          alt="Menu4"
+        />
+        <Image
+          width="100%"
+          aspectRatio={840 / 1190}
+          defaultSource={{ uri: "/assets/images/Menu5.png" }}
+          source={{ uri: "/assets/images/Menu5.png" }}
+          alt="Menu5"
+        />
       </YStack>
     </ScrollView>
   );
